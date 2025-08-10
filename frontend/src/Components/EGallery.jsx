@@ -128,7 +128,7 @@ export default function ICTApplications() {
       className="relative bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white py-5 px-2  overflow-hidden"
       style={{ fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}
     >
-      <h2 className="text-4xl font-semibold text-center mb-12  decoration-yellow-300">
+      <h2 className="text-5xl  font-semibold text-center mb-12 bg-gradient-to-b from-red-900 via-red-600 to-orange-400 bg-clip-text text-transparent">
         ICT Applications
       </h2>
 
