@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Infotabs from "./Components/Infotabs"
 import Home from "./pages/Home";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function AppContent() {
   const location = useLocation();
