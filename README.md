@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # Election-Commision
 =======
-# 🚀 E-Cell
+# 🚀 Election Commision
 
 A modern, interactive web portal to connect alumni with the E-Cell community — built using React, Tailwind CSS, Three.js, and Framer Motion.
 
@@ -46,8 +46,8 @@ src/
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/Klaidoscope14/E-Cell.git
-cd E-Cell/frontend
+git clone https://github.com/rajprashant3302/Election-Commision.git
+cd Election-Commision/frontend
 ```
 
 ### 2. Install Dependencies
@@ -76,7 +76,7 @@ npm run build
 
 ## Contributing
 
-Pull requests are welcome! Let’s grow the E-Cell alumni network together.
+Pull requests are welcome! Let’s grow the Election-Commision network together.
 
 ---
 
