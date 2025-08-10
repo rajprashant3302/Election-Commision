@@ -7,9 +7,8 @@ import Carousel from '../Components/Carousel'
 import Footer from '../Components/Footer'
 import OfficerCard from '../Components/OfficerCard'
 import EnumerationFormLinks from '../Components/EnumerationFormLinks'
-import Navbar from '../Components/Navbar'
 import Nav from '../Components/Nav'
-import Top_navbar from '../Components/Top_navbar'
+
 
 const Home = () => {
   return (
