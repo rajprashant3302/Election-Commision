@@ -13,7 +13,7 @@ const imageSlides = [
 
 const ImageCarousel = () => {
   return (
-    <div className="w-full py-8 px-1 bg-gray-100">
+    <div className="w-full h-full py-8 px-1 bg-gray-100">
       <Carousel
         showThumbs={false}
         showStatus={false}
@@ -29,7 +29,7 @@ const ImageCarousel = () => {
             <img
               src={image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover"
+              className=" h-full object-cover"
             />
           </div>
         ))}

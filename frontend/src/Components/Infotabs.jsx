@@ -14,8 +14,8 @@ function Infotabs() {
       {/* Nav Bar */}
       <nav className="flex border-b-1 border-blue-900 gap-1 mt-1 flex-wrap justify-center sm:justify-start items-center">
         {[
-          { name: "Latest News", path: "/latest-news" },
-          { name: "Current Issues", path: "/" },
+          { name: "Latest News", path: "/" },
+          { name: "Current Issues", path: "/current-issues" },
           { name: "Press Releases", path: "/press-releases" },
           { name: "Instructions", path: "/instructions" },
           { name: "Tender & Vacancies", path: "/tender-vacancies" },
@@ -42,9 +42,9 @@ function Infotabs() {
       {/* Page Routes */}
       <div className="mt-4 w-full">
         <Routes>
-          <Route path="/" element={<CurrentIssues />} />
+          <Route path="/current-issues" element={<CurrentIssues />} />
           <Route path="/press-releases" element={<PressReleases />} />
-          <Route path="/latest-news" element={<LatestNews />} />
+          <Route path="/" element={<LatestNews />} />
           <Route path="/instructions" element={<Instructions />} />
           <Route path="/tender-vacancies" element={<TenderVacancies />} />
           <Route path="/election-stories" element={<ElectionStories />} />

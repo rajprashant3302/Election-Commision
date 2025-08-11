@@ -2,7 +2,7 @@ import React from "react";
 
 const OfficerCard = () => {
   return (
-    <div className="bg-white w-full sm:max-w-full lg:max-w-[380px] mx-auto mt-10 rounded-xl shadow-lg overflow-hidden border border-gray-200">
+    <div className="bg-white w-full sm:max-w-full md:max-w-[30vw] mx-auto mt-10 rounded-xl shadow-lg overflow-hidden border border-gray-200">
       {/* Header */}
       <div className="bg-blue-600 text-white text-center py-3 text-lg font-semibold">
         Chief Electoral Officer
