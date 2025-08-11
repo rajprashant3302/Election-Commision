@@ -3,13 +3,13 @@
 =======
 # 🚀 Election Commision
 
-A modern, interactive web portal to connect alumni with the E-Cell community — built using React, Tailwind CSS, Three.js, and Framer Motion.
+A modern, interactive web portal to connect alumni with the Election Commision community — built using React, Tailwind CSS, Three.js, and Framer Motion.
 
 ---
 
 ## 🌐 Live Demo
 
-\[[https://e-cell-steel.vercel.app/](https://e-cell-steel.vercel.app/)]
+https://election-commision.vercel.app/
 
 ---
 
