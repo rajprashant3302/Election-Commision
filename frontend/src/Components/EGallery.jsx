@@ -130,7 +130,7 @@ export default function ICTApplications() {
 
       style={{ fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}
     >
-      <h2 className="text-5xl  font-bold text-center mb-12 text-center w-full  p-4 text-5xl font-bold   mt-0.5 mb-2 bg-gradient-to-b from-white via-white to-black-300 bg-clip-text text-transparent">
+      <h2 className="sm:text-5xl text-3xl  font-bold text-center mb-12 text-center w-full  p-4 text-5xl font-bold   mt-0.5 mb-2 bg-gradient-to-b from-white via-white to-black-300 bg-clip-text text-transparent">
         ICT Applications
       </h2>
 
