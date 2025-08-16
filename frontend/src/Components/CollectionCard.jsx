@@ -1,5 +1,5 @@
 import React from 'react';
-import ListCard from './Listcard';
+import ListCard from './ListCard';
 import './CardStyle.css';
 
 export const CollectionCard = () => {
