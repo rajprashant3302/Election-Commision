@@ -8,7 +8,6 @@ const EciMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const topSectionRef = useRef(null);
   const [topHeight, setTopHeight] = useState(0);
-  const [hoverTools, setHoverTools] = useState(false);
 
   // Measure height of BOTH rows combined
   useEffect(() => {
@@ -28,11 +27,7 @@ const EciMenu = () => {
       {/* Top Section (fixed) */}
       <div ref={topSectionRef} className="fixed top-0 left-0 w-full z-[9999]">
         {/* Top Blue Bar */}
-        <div
-          className="bg-[#5b21b6] text-white text-[15px] flex flex-wrap justify-between items-center px-4 py-2"
-          onMouseEnter={() => setHoverTools(true)}
-          onMouseLeave={() => setHoverTools(false)}
-        >
+        <div className="bg-[#5b21b6] text-white text-[15px] flex flex-wrap justify-between items-center px-4 py-2">
           <div className="flex items-center space-x-2">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -45,12 +40,8 @@ const EciMenu = () => {
             </span>
           </div>
 
-          {/* Tools & Icons (hidden until hover) */}
-          <div
-            className={`flex gap-2 items-center transition-all duration-500 ease-in-out ${
-              hoverTools ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}
-          >
+          {/* Tools & Icons (always visible now) */}
+          <div className="flex gap-2 items-center">
             <div className="flex items-center gap-3 border-r px-2 border-white">
               <span className="hidden md:flex md:items-center md:gap-1 border-r px-2 border-white">
                 <IoCall /> Toll Free - 1950
