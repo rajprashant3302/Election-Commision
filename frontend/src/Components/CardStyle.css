@@ -1,0 +1,75 @@
+.custom-card {
+  background: linear-gradient(145deg, #82dbfe, #f0f4f6);
+  border-radius: 20px;
+  min-width: 538px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.wave-line {
+  height: 4px;
+  width: 59px;
+  background: #e91e63;
+  margin: 0 auto 10px;
+  border-radius: 2px;
+}
+
+.custom-list {
+  border-radius: 10px !important;
+  margin: 5px 0;
+  background: white;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-list:hover {
+  transform: scale(1.12);
+  background: #f9fcff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.custom-btn {
+  background: #028ccc;
+  border: none;
+  border-radius: 10px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.custom-btn:hover {
+  background: #00aaff;
+  transform: scale(1.08);
+}
+
+.collection-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+.collection-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.collection-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.collection-item {
+  flex: 0 0 auto;
+  width: fit-content;
+}
+
+.collection-item:hover {
+  transform: scale(1.01);
+}

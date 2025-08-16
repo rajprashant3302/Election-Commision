@@ -110,11 +110,11 @@ const AppCard = ({ app }) => (
     <img
       src={app.src}
       alt={app.alt}
-      className="w-full  object-fit bg-gray-100"
+      className="w-full rounded-2xl object-fit bg-gray-100"
       loading="lazy"
     />
     <div
-      className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white text-center py-2 opacity-0 hover:opacity-100 transition-opacity duration-300"
+      className="absolute rounded-2xl bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white text-center py-2 opacity-0 hover:opacity-100 transition-opacity duration-300"
       style={{ backdropFilter: "blur(6px)" }}
     >
       {app.title}
@@ -125,10 +125,12 @@ const AppCard = ({ app }) => (
 export default function ICTApplications() {
   return (
     <section
-      className="relative bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white py-5 px-2  overflow-hidden"
+    className="relative bg-gradient-to-r from-indigo-500 via-blue-600 to-purple-600 text-white py-5 px-2 overflow-hidden"
+
+
       style={{ fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}
     >
-      <h2 className="text-5xl  font-semibold text-center mb-12 bg-gradient-to-b from-red-900 via-red-600 to-orange-400 bg-clip-text text-transparent">
+      <h2 className="text-5xl  font-bold text-center mb-12 text-center w-full  p-4 text-5xl font-bold   mt-0.5 mb-2 bg-gradient-to-b from-white via-white to-black-300 bg-clip-text text-transparent">
         ICT Applications
       </h2>
 

@@ -4,43 +4,37 @@ import { Link } from "react-router-dom";
 const categories = [
   {
     name: "Electoral Roll",
-    color: "bg-teal-500",
-    border:"border-teal-500",
-    icon: "https://www.eci.gov.in/newimg/icons/voter-services.png", // your icon path
+    color: "from-teal-400 to-teal-600",
+    icon: "https://www.eci.gov.in/newimg/icons/voter-services.png",
     path: "/electors",
   },
   {
     name: "Affidavit",
-    color: "bg-purple-500",
-    border:"border-purple-500",
+    color: "from-purple-400 to-purple-600",
     icon: "https://www.eci.gov.in/newimg/icons/candidate-polparty.png",
     path: "/political-parties",
   },
   {
     name: "Handbook References",
-    color: "bg-red-500",
-    border:"border-red-500",
+    color: "from-red-400 to-red-600",
     icon: "https://www.eci.gov.in/newimg/icons/election.png",
     path: "/election-management",
   },
   {
     name: "Election Expenditure",
-    color: "bg-sky-500",
-    border:"border-sky-500",
+    color: "from-sky-400 to-sky-600",
     icon: "https://www.eci.gov.in/newimg/icons/publication.png",
     path: "/media-publications",
   },
   {
     name: "Voter Education",
-    color: "bg-yellow-500",
-    border:"border-yellow-500",
+    color: "from-yellow-400 to-yellow-600",
     icon: "https://www.eci.gov.in/newimg/icons/voter-education.png",
     path: "/voter-education",
   },
   {
     name: "Fact Check",
-    color: "bg-orange-500",
-    border:"border-orange-500",
+    color: "from-orange-400 to-orange-600",
     icon: "https://www.eci.gov.in/newimg/icons/ict-apps.png",
     path: "/ict-apps",
   },
@@ -48,32 +42,39 @@ const categories = [
 
 const CategoryBar = () => {
   return (
-    <div className="flex flex-wrap justify-center items-center w-full mb-9">
+    <div className="flex flex-wrap justify-center gap-15 md:gap-10 w-full mt-10">
       {categories.map((cat, index) => (
         <Link
           key={index}
           to={cat.path}
-          className="flex flex-col items-center relative  w-32 md:w-52 group  transition-transform gap-1"
+          className="group relative flex flex-col items-center w-28 md:w-36"
         >
-          {/* Top colored bar */}
+          {/* Card */}
           <div
-            className={`absolute top-1/2 translate-y-2 md:translate-y-7 h-3 w-full ${cat.color} z-0`}
-          ></div>
-
-          {/* Circle with icon */}
-          <div
-            className={`relative z-10 w-20 h-20 md:w-28 md:h-28 rounded-full flex items-center justify-center border-[10px]  ${cat.border}  bg-white`}
+            className={`relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 w-24 h-24 md:w-32 md:h-32 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:shadow-2xl`}
           >
-            <img src={cat.icon} alt={cat.name} className="w-14 md:w-12" />
+            {/* Gradient circle background */}
+            <div
+              className={`absolute inset-0 bg-gradient-to-br ${cat.color} opacity-20 group-hover:opacity-40 transition-all`}
+            ></div>
+
+            {/* Icon */}
+            <img
+              src={cat.icon}
+              alt={cat.name}
+              className="w-12 md:w-14 relative z-10 transition-transform duration-300 group-hover:scale-125"
+            />
           </div>
 
-          {/* Small black arrow */}
-          <div className="w-0 h-0 border-l-[6px] border-r-[6px] border-l-transparent border-r-transparent border-t-[8px] border-t-black mt-[-1px]"></div>
-
           {/* Label */}
-          <p className="text-center text-sm md:text-base font-medium mt-2 md:mt-1">
+          <p className="text-center text-sm md:text-base font-semibold mt-3 text-gray-700 group-hover:text-gray-900">
             {cat.name}
           </p>
+
+          {/* Glow effect on hover */}
+          <div
+            className={`absolute -inset-1 rounded-2xl bg-gradient-to-r ${cat.color} opacity-0 blur-lg transition duration-300 group-hover:opacity-40`}
+          ></div>
         </Link>
       ))}
     </div>

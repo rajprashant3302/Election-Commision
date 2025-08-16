@@ -6,7 +6,7 @@ import { FaTimes } from 'react-icons/fa';
 const NavMenu = ({ menuOpen, setMenuOpen }) => {
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full bg-[#003049e6] text-white transition-transform duration-500 ease-in-out z-50 overflow-y-auto ${
+      className={`fixed top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-600 via-purple-700 to-pink-600 ... to-fuchsia-500 text-white transition-transform duration-500 ease-in-out z-50 overflow-y-auto ${
         menuOpen ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
