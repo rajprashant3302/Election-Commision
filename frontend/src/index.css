@@ -1,13 +1,71 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html {
   scroll-behavior: smooth;
-
 }
-a{
+
+a {
   text-decoration: none;
+}
+
+/* 🔥 Custom Gradient Button */
+.Btn {
+  width: 320px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple → Blue gradient */
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  gap: 8px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.svgIcon {
+  width: 18px;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.Btn::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+  top: -120%;
+  left: -120%;
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+}
+
+.Btn:hover::before {
+  top: -50%;
+  left: -50%;
+}
+
+.Btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(37, 117, 252, 0.5);
+}
+
+.Btn:active {
+  transform: translateY(2px) scale(0.98);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
