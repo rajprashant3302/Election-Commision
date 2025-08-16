@@ -41,7 +41,7 @@ export const CollectionCard = () => {
   ];
 
   return (
-    <div className="collection-container">
+    <div className="collection-container ">
       {cardsData.map((card, index) => (
         <div key={index} className="collection-item">
           <ListCard
