@@ -42,16 +42,19 @@ const categories = [
 
 const CategoryBar = () => {
   return (
-    <div className="flex flex-wrap justify-center gap-15 md:gap-10 w-full mt-10">
+    <div className="grid grid-cols-3 sm:grid-cols-6 gap-6 md:gap-10 w-full mt-10 place-items-center px-10">
       {categories.map((cat, index) => (
         <Link
           key={index}
           to={cat.path}
-          className="group relative flex flex-col items-center w-28 md:w-36"
+          className="group relative flex flex-col items-center"
         >
           {/* Card */}
           <div
-            className={`relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 w-24 h-24 md:w-32 md:h-32 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:shadow-2xl`}
+            className={`relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 
+            w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-28 lg:h-28 xl:w-32 xl:h-32 
+            flex items-center justify-center 
+            transition-transform duration-300 group-hover:scale-110 group-hover:shadow-2xl`}
           >
             {/* Gradient circle background */}
             <div
@@ -62,12 +65,12 @@ const CategoryBar = () => {
             <img
               src={cat.icon}
               alt={cat.name}
-              className="w-12 md:w-14 relative z-10 transition-transform duration-300 group-hover:scale-125"
+              className="w-10 sm:w-12 md:w-14 relative z-10 transition-transform duration-300 group-hover:scale-125"
             />
           </div>
 
           {/* Label */}
-          <p className="text-center text-sm md:text-base font-semibold mt-3 text-gray-700 group-hover:text-gray-900">
+          <p className="text-center text-xs sm:text-sm md:text-base font-semibold mt-3 text-gray-700 group-hover:text-gray-900">
             {cat.name}
           </p>
 

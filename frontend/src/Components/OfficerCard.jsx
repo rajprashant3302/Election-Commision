@@ -2,7 +2,7 @@ import React from "react";
 
 const OfficerCard = () => {
   return (
-    <div className="bg-white w-full sm:max-w-full md:max-w-[25vw] mx-auto mt-10 rounded-xl shadow-lg overflow-hidden border border-gray-200">
+    <div className="bg-white w-full sm:max-w-full md:max-w-[35vw] mx-auto mt-10 rounded-xl shadow-lg overflow-hidden border border-gray-200">
       {/* Header */}
       <div className="bg-blue-600 text-white text-center py-3 text-lg font-semibold">
         Chief Electoral Officer
@@ -26,7 +26,7 @@ const OfficerCard = () => {
         </div>
 
         {/* Description */}
-        <p className="text-sm md:text-base text-gray-700 leading-relaxed text-center md:text-left">
+        <p className="text-sm md:text-base text-gray-700 leading-relaxed text-justify ">
           The site has primarily been made to improve communication between the
           electors of Bihar and the Department of Election in Bihar. It provides
           adequate and relevant information about the office of the Chief

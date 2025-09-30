@@ -16,7 +16,7 @@ const Home = () => {
       <Nav />
       <Carousel />
       <Imagebar />
-      <div className="flex flex-wrap gap-2 justify-center p-3 md:p-1">
+      <div className="flex flex-wrap gap-2 md:gap-2 justify-center p-3 md:p-1">
         <OfficerCard />
         <EnumerationFormLinks />
       </div>
@@ -31,13 +31,16 @@ const Home = () => {
     </span>
   </h2>
 
-  {/* Videos Grid */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-4">
-    <Video videoUrl="https://www.youtube.com/embed/QJ9eyZbx61g?si=OLHkV80CdKxmsq9J" />
-    <Video videoUrl="https://www.youtube.com/embed/b8X8Eg29BK4?si=dvTDjr27-tQaSjug" />
-    <Video videoUrl="https://www.youtube.com/embed/TcYjgoD_-Ng?si=kWyDNW_l4V7Xcnbr" />
-    <Video videoUrl="https://www.youtube.com/embed/-x6cXNUuEdk?si=7t4Zk_sVotRno-C5" />
-  </div>
+{/* Videos Grid */}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
+                gap-x-5 sm:gap-x-8 lg:gap-x-10 
+                gap-y-12 sm:gap-y-8 lg:gap-y-10 px-4">
+  <Video videoUrl="https://www.youtube.com/embed/QJ9eyZbx61g?si=OLHkV80CdKxmsq9J" />
+  <Video videoUrl="https://www.youtube.com/embed/b8X8Eg29BK4?si=dvTDjr27-tQaSjug" />
+  <Video videoUrl="https://www.youtube.com/embed/TcYjgoD_-Ng?si=kWyDNW_l4V7Xcnbr" />
+  <Video videoUrl="https://www.youtube.com/embed/-x6cXNUuEdk?si=7t4Zk_sVotRno-C5" />
+</div>
+
 </div>
        
       <Footer />

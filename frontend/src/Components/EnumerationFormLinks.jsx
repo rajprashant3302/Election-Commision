@@ -49,7 +49,7 @@ const links = [
 
 const EnumerationFormLinks = () => {
   return (
-    <div className="w-full sm:max-w-full md:max-w-[65vw] mt-10 bg-white rounded-2xl overflow-hidden border shadow-sm">
+    <div className="w-full sm:max-w-full md:max-w-[55vw] mt-10 bg-white rounded-2xl overflow-hidden border shadow-sm">
       {/* Header */}
       <div className="bg-blue-600 text-white text-center py-3 text-lg font-semibold flex justify-center items-center space-x-2">
         <span>गणना प्रपत्र (Enumeration Form)</span>
