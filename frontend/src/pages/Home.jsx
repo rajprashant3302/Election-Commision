@@ -33,8 +33,8 @@ const Home = () => {
 
 {/* Videos Grid */}
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
-                gap-x-5 sm:gap-x-8 lg:gap-x-10 
-                gap-y-12 sm:gap-y-8 lg:gap-y-10 px-4">
+                gap-x-5 sm:gap-x-8 md:gap-x-10 
+                gap-y-12 sm:gap-y-8 md:gap-y-10 px-4">
   <Video videoUrl="https://www.youtube.com/embed/QJ9eyZbx61g?si=OLHkV80CdKxmsq9J" />
   <Video videoUrl="https://www.youtube.com/embed/b8X8Eg29BK4?si=dvTDjr27-tQaSjug" />
   <Video videoUrl="https://www.youtube.com/embed/TcYjgoD_-Ng?si=kWyDNW_l4V7Xcnbr" />
