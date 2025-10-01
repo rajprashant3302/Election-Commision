@@ -1,12 +1,13 @@
-// File: EciFullMenu.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
+// File: SectionPage.jsx
+import React from "react";
+import { useParams, Link } from "react-router-dom";
 
+// Data for all sections
 const sections = [
   {
     title: "VOTER'S CORNER",
-    path: "/voters-corner",
-    items: [
+    path: "voters-corner",
+    links: [
       "Electors Registration",
       "Track Your Registration Status",
       "Offline Forms For Registration In E-Roll",
@@ -22,8 +23,8 @@ const sections = [
   },
   {
     title: "VOTER INFORMATION",
-    path: "/voter-information",
-    items: [
+    path: "voter-information",
+    links: [
       "National Voters Day",
       "Electors Registration (04-Tirhut Graduate Constituency)",
       "GC - Tirhut Electoral Roll (Final Roll W.R.T. 01.11.2024)",
@@ -39,8 +40,8 @@ const sections = [
   },
   {
     title: "ELECTIONS",
-    path: "/elections",
-    items: [
+    path: "elections",
+    links: [
       "Important Instructions",
       "Status of Ex-Gratia Payments",
       "SEMP/DEMP",
@@ -54,8 +55,8 @@ const sections = [
   },
   {
     title: "MEDIA/PUBLICATION",
-    path: "/media-publication",
-    items: [
+    path: "media-publication",
+    links: [
       "Workshop/Events",
       "Media Corner",
       "Statistical Report",
@@ -69,8 +70,8 @@ const sections = [
   },
   {
     title: "CANDIDATE/POLITICAL PARTIES",
-    path: "/candidate-parties",
-    items: [
+    path: "candidate-parties",
+    links: [
       "Political Parties (Guidelines/Instructions)",
       "Candidate Affidavits",
       "Candidate Nominations/ Other forms",
@@ -81,8 +82,8 @@ const sections = [
   },
   {
     title: "EVM/VVPAT",
-    path: "/evm-vvpat",
-    items: [
+    path: "evm-vvpat",
+    links: [
       "List of EVMs after First & Second Randomisation for General Elections 2024",
       "Credibility of EVM",
       "EVM Brochure for Electors",
@@ -93,8 +94,8 @@ const sections = [
   },
   {
     title: "CEO OFFICIALS",
-    path: "/ceo-officials",
-    items: [
+    path: "ceo-officials",
+    links: [
       "SPARROW",
       "Budget/Allotments",
       "Organizational Structure",
@@ -108,8 +109,8 @@ const sections = [
   },
   {
     title: "REFERENCE MATERIAL",
-    path: "/reference-material",
-    items: [
+    path: "reference-material",
+    links: [
       "Handbook References",
       "Important Maps",
       "Training Materials",
@@ -124,41 +125,60 @@ const sections = [
   },
 ];
 
-const NavMenu = ({ menuOpen }) => {
+const colors = [
+  "bg-teal-400",
+  "bg-purple-400",
+  "bg-indigo-400",
+  "bg-pink-400",
+  "bg-orange-400",
+  "bg-green-400",
+  "bg-yellow-400",
+  "bg-cyan-400",
+]; // rotating colors for cards
+
+const SectionPage = () => {
+  const { sectionPath } = useParams();
+  const section = sections.find((s) => s.path === sectionPath);
+
+  if (!section) {
+    return (
+      <p className="text-center mt-20 text-xl text-red-600 font-semibold">
+        Section not found
+      </p>
+    );
+  }
+
   return (
-    <div
-      className={`fixed top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-600 via-purple-700 to-pink-600 text-white transition-transform duration-500 ease-in-out z-50 overflow-y-auto ${
-        menuOpen ? 'translate-y-0' : '-translate-y-full'
-      }`}
-    >
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 p-6 text-sm leading-6">
-        {sections.map((section, idx) => (
-          <Link
-            key={idx}
-            to={`/sections${section.path}`}
-            className="block focus:outline-none"
-          >
-            <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-4 border border-white/20 hover:scale-105 transition-transform duration-200 cursor-pointer h-full flex flex-col">
-              <h3 className="text-yellow-400 font-semibold mb-2">{section.title}</h3>
-              <ul className="space-y-1 text-white text-sm flex-1">
-                {section.items.slice(0, 5).map((item, i) => (
-                  <li
-                    key={i}
-                    className="hover:text-slate-200 hover:translate-x-1 transition-all duration-200"
-                  >
-                    {item}
-                  </li>
-                ))}
-                {section.items.length > 5 && (
-                  <li className="text-blue-200 font-semibold mt-1">+ {section.items.length - 5} more</li>
-                )}
-              </ul>
-            </div>
-          </Link>
-        ))}
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100 py-10">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-10">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800">
+            {section.title}
+          </h1>
+          <p className="mt-2 text-gray-700 font-medium">
+            Click on any link to navigate to detailed information.
+          </p>
+        </div>
+
+        {/* Links Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {section.links.map((link, idx) => {
+            const color = colors[idx % colors.length];
+            return (
+              <Link
+                key={idx}
+                to="#"
+                className={`group relative flex flex-col justify-center items-center h-36 p-4 rounded-2xl shadow-md ${color} text-white font-semibold text-lg hover:scale-105 transition-transform border-2 border-white hover:border-gray-200`}
+              >
+                <p className="text-center">{link}→</p>
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
 };
 
-export default NavMenu;
+export default SectionPage;

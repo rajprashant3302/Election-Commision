@@ -1,20 +1,24 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import Infotabs from "./Components/Infotabs"
 import Home from "./pages/Home";
+import SectionPage from "./pages/SectionPage";
 
 function AppContent() {
   const location = useLocation();
   return (
     <>
-      <Home/>
+      {/* You can use location if needed for animations */}
+      <Home />
     </>
-  )
+  );
 }
 
 export default function App() {
   return (
     <Router>
-      <AppContent />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sections/:sectionPath" element={<SectionPage />} />
+      </Routes>
     </Router>
   );
 }
