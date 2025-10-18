@@ -1,160 +1,70 @@
 // File: EciFullMenu.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import sections from "../pages/SectionData";
 
-const sections = [
-  {
-    title: "VOTER'S CORNER",
-    path: "/voters-corner",
-    items: [
-      "Electors Registration",
-      "Track Your Registration Status",
-      "Offline Forms For Registration In E-Roll",
-      "Know Your Polling Booth",
-      "Know Your BLO, ERO & DEO",
-      "List of Booth Level Officers (BLO)",
-      "Draft & Final Electoral Roll w.r.t. 01.01.2025 and Supplement-2 w.r.t. 01.04.2025",
-      "Search in Electoral Roll",
-      "Form 9, 10, 11, 11A, 11B",
-      "List Of Claims & Objections in SSR-2025",
-      "Monthly list of Additions, Modifications & Deletions",
-    ],
-  },
-  {
-    title: "VOTER INFORMATION",
-    path: "/voter-information",
-    items: [
-      "National Voters Day",
-      "Electors Registration (04-Tirhut Graduate Constituency)",
-      "GC - Tirhut Electoral Roll (Final Roll W.R.T. 01.11.2024)",
-      "TC/GC Electoral Search",
-      "Claims and Objections (TC & GC)",
-      "Register Complaints",
-      "Service Voters and Overseas Voters",
-      "PwD Voters",
-      "SVEEP (Voter’s Education)",
-      "Voter Helpline No: 1950",
-      "Fact Check",
-    ],
-  },
-  {
-    title: "ELECTIONS",
-    path: "/elections",
-    items: [
-      "Important Instructions",
-      "Status of Ex-Gratia Payments",
-      "SEMP/DEMP",
-      "Past Elections",
-      "Electoral Roll",
-      "ERMS",
-      "Election Law",
-      "Model Code of Conduct",
-      "Judicial References",
-    ],
-  },
-  {
-    title: "MEDIA/PUBLICATION",
-    path: "/media-publication",
-    items: [
-      "Workshop/Events",
-      "Media Corner",
-      "Statistical Report",
-      "Compendium of Instructions",
-      "Press Release",
-      "Handbooks/ Manuals/ Model Check List",
-      "Latest News",
-      "Right to Information",
-      "Tender",
-    ],
-  },
-  {
-    title: "CANDIDATE/POLITICAL PARTIES",
-    path: "/candidate-parties",
-    items: [
-      "Political Parties (Guidelines/Instructions)",
-      "Candidate Affidavits",
-      "Candidate Nominations/ Other forms",
-      "List of Political Parties/Election Symbols by ECI",
-      "Candidate/Political Parties Expenditure Balance Sheets",
-      "List of Disqualified Persons",
-    ],
-  },
-  {
-    title: "EVM/VVPAT",
-    path: "/evm-vvpat",
-    items: [
-      "List of EVMs after First & Second Randomisation for General Elections 2024",
-      "Credibility of EVM",
-      "EVM Brochure for Electors",
-      "EVM Brochure for Presiding Officers",
-      "EVM Brochure for Candidates and Political Parties",
-      "FLC OK EVMs for Upcoming Lok Sabha Election 2024",
-    ],
-  },
-  {
-    title: "CEO OFFICIALS",
-    path: "/ceo-officials",
-    items: [
-      "SPARROW",
-      "Budget/Allotments",
-      "Organizational Structure",
-      "DEO’s Portal",
-      "Important Instructions & Letters (CEO Officials)",
-      "E-Office",
-      "Asset Declarations",
-      "Transfers/Postings/Promotions",
-      "Contact Us",
-    ],
-  },
-  {
-    title: "REFERENCE MATERIAL",
-    path: "/reference-material",
-    items: [
-      "Handbook References",
-      "Important Maps",
-      "Training Materials",
-      "Hand Books",
-      "e-Books",
-      "Question Bank",
-      "List of AC’s with Division and District",
-      "Format 1-8 (Final Roll)",
-      "Form-20 | Form-21E",
-      "Polling Station List",
-    ],
-  },
-];
+const NavMenu = ({ menuOpen, setMenuOpen }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
 
-const NavMenu = ({ menuOpen }) => {
+  // Close menu whenever the route changes
+  useEffect(() => {
+    if (menuOpen) {
+      setMenuOpen(false);
+    }
+  }, [location.pathname]);
+
+  const handleNavigate = (path) => {
+    navigate(`/sections/${path}`);
+  };
+
   return (
     <div
       className={`fixed top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-600 via-purple-700 to-pink-600 text-white transition-transform duration-500 ease-in-out z-50 overflow-y-auto ${
-        menuOpen ? 'translate-y-0' : '-translate-y-full'
+        menuOpen ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 p-6 text-sm leading-6">
         {sections.map((section, idx) => (
-          <Link
+          <div
             key={idx}
-            to={`/sections${section.path}`}
-            className="block focus:outline-none"
+            onClick={() => handleNavigate(section.path)}
+            className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-4 border border-white/20 hover:scale-105 transition-transform duration-200 cursor-pointer h-full flex flex-col"
           >
-            <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-4 border border-white/20 hover:scale-105 transition-transform duration-200 cursor-pointer h-full flex flex-col">
-              <h3 className="text-yellow-400 font-semibold mb-2">{section.title}</h3>
-              <ul className="space-y-1 text-white text-sm flex-1">
-                {section.items.slice(0, 5).map((item, i) => (
-                  <li
-                    key={i}
-                    className="hover:text-slate-200 hover:translate-x-1 transition-all duration-200"
+            <h3 className="text-yellow-400 font-semibold mb-2">
+              {section.title}
+            </h3>
+
+            <ul className="space-y-1 text-white text-sm flex-1">
+              {section.items.slice(0, 5).map((item, i) => (
+                <li
+                  key={i}
+                  className="hover:text-slate-200 hover:translate-x-1 transition-all duration-200"
+                >
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="block"
                   >
-                    {item}
-                  </li>
-                ))}
-                {section.items.length > 5 && (
-                  <li className="text-blue-200 font-semibold mt-1">+ {section.items.length - 5} more</li>
-                )}
-              </ul>
-            </div>
-          </Link>
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+              {section.items.length > 5 && (
+                <li
+                  className="text-blue-200 font-semibold mt-1 hover:underline hover:text-white cursor-pointer"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleNavigate(section.path);
+                  }}
+                >
+                  + {section.items.length - 5} more
+                </li>
+              )}
+            </ul>
+          </div>
         ))}
       </div>
     </div>
