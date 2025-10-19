@@ -50,6 +50,14 @@ import Handbook from "./pages/PoliticalParty/Handbook.jsx";
 import Compendium from "./pages/EciOfficial/Compendium.jsx";
 import ObserverPortal from "./pages/EciOfficial/ObserverPortal.jsx";
 
+//ELECTORALS PAGES
+import Homepage from "./pages/Homepage";
+import Electoral_search from "./pages/Electoral_search";
+import Sir_finalroll from "./pages/Sir_finalroll";
+import Sir_finalroll_forfullAC from "./pages/Sir_finalroll_forfullAC";
+import Search_name_draft_roll from "./pages/Search_name_draft_roll";
+
+
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/sections/:sectionPath", element: <SectionPage /> },
@@ -73,13 +81,13 @@ const routes = [
   { path: "/national-voters-day", element: <NationalVotersDay /> },
   { path: "/fact-check", element: <FactCheck /> },
   { path: "/training-materials", element: <TrainingMaterials /> },
-  { path: "/important-maps", element: <ImportantMaps/> },
-  { path: "/rti", element: <RTI/> },
-  { path: "/model-code-of-conduct", element: <ModelModeOfConduct/> },
-  { path: "/past-elections", element: <PastElections/> },
-  { path: "/semp-demp", element: <ElectionPlan/> },
-  { path: "/important-instructions", element: <ImportantInstructions/> },
-  { path: "/ex-gratia-status", element: <ExGratiaStatusPage/> },
+  { path: "/important-maps", element: <ImportantMaps /> },
+  { path: "/rti", element: <RTI /> },
+  { path: "/model-code-of-conduct", element: <ModelModeOfConduct /> },
+  { path: "/past-elections", element: <PastElections /> },
+  { path: "/semp-demp", element: <ElectionPlan /> },
+  { path: "/important-instructions", element: <ImportantInstructions /> },
+  { path: "/ex-gratia-status", element: <ExGratiaStatusPage /> },
 
   // Infotab Pages
   { path: "/latest-news", element: <LatestNews /> },
@@ -103,6 +111,14 @@ const routes = [
   { path: "/sections/eci/handbook", element: <Handbook /> },
   { path: "/sections/eci/postalballots", element: <PostalBallots /> },
   { path: "/sections/eci/servicevoterportal", element: <ServiceVoterPortal /> },
+
+  // ELECTORALS ROUTES
+  { path: "/sections/electorals/homepage", element: <Homepage /> },
+  { path: "/sections/electorals/search", element: <Electoral_search /> },
+  { path: "/sections/electorals/sir-finalroll", element: <Sir_finalroll /> },
+  { path: "/sections/electorals/sir-finalroll-fullAC", element: <Sir_finalroll_forfullAC /> },
+  { path: "/sections/electorals/search-name-draft-roll", element: <Search_name_draft_roll /> },
+
 
 ];
 
