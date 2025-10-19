@@ -5,8 +5,6 @@ import Nav from '../Components/Nav'
 const Homepage = () => {
   return (
     <>
-    <Nav />
-    <NavMenu />
     <div className='parent1 rounded-2xl m-2  grid gap-3 grid-cols-1 md:grid-cols-5'> 
       <div className="forms bg-[#d3e1ee] col-span-3 rounded-2xl">
         <h1 className='bg-blue-800 rounded-t-[16px] text-white p-3 text-xl tracking-widest'>FORMS</h1>

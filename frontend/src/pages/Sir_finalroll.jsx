@@ -47,7 +47,6 @@ Captcha: ${captcha}`);
 
   return (
     <>
-    <Nav/>
       <h2 className="text-xl py-2 px-5 font-bold mb-6 bg-blue-300 text-gray-700">
         Search Electoral Roll
       </h2>

@@ -13,7 +13,6 @@ import CollectionCard from "../Components/CollectionCard"
 const Home = () => {
   return (
     <div>
-      <Nav />
       <Carousel />
       <Imagebar />
       <div className="flex flex-wrap gap-2 md:gap-2 justify-center p-3 md:p-1">
@@ -42,8 +41,6 @@ const Home = () => {
 </div>
 
 </div>
-       
-      <Footer />
     </div>
   );
 };

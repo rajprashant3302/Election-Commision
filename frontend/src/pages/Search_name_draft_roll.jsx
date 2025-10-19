@@ -8,11 +8,9 @@ const Search_name_draft_roll = () => {
   const [generatedCaptcha, setGeneratedCaptcha] = useState(generateCaptcha());
   const [error, setError] = useState("");
 
-  // sample states - replace or extend as needed
   const states = ["Bihar", "Haryana", "Uttar Pradesh", "Maharashtra", "Delhi"];
 
   function generateCaptcha() {
-    // 6-char alphanumeric captcha
     return Math.random().toString(36).substring(2, 8).toUpperCase();
   }
 
@@ -34,11 +32,6 @@ const Search_name_draft_roll = () => {
       setError("Please enter EPIC Number.");
       return;
     }
-    // optional: validate EPIC pattern (commonly 10 alphanumeric chars)
-    // if (!/^[A-Za-z0-9]{8,12}$/.test(epic.trim())) {
-    //   setError("EPIC should be 8–12 alphanumeric characters.");
-    //   return;
-    // }
 
     if (!captchaInput.trim()) {
       setError("Please enter captcha.");
@@ -49,7 +42,6 @@ const Search_name_draft_roll = () => {
       return;
     }
 
-    // If all good — replace with real search logic
     alert(`Searching...\nState: ${stateVal}\nEPIC: ${epic}`);
   };
 
@@ -63,7 +55,6 @@ const Search_name_draft_roll = () => {
 
   return (
   <>
-    <Nav/>
     <h2 className="text-lg  w-fit bg-purple-600  px-3 mx-auto rounded py-2 font-semibold mt-16 text-white ">Search your Name In Draft Roll</h2>
     <div className="bg-white rounded-xl shadow-md pb-6 px-10 max-w-2xl mx-auto border border-gray-200">
 
