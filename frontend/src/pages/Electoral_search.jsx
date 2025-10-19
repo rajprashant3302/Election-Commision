@@ -11,7 +11,7 @@ const Electoral_search = () => {
 
   return (
     <>
-    <h2 className='flex items-center gap-1 font-bold text-2xl justify-center '><img src="../../src/assets/searchRoll.1bc6b8dd9653eb34175d.png" className='w-16' alt="search"/>Search in Electoral Roll</h2>
+    <h2 className='flex items-center gap-1 font-bold text-2xl justify-center '><img src="/searchRoll.png" className='w-16' alt="search"/>Search in Electoral Roll</h2>
     <div className="border-2 rounded p-4 bg-white">
       {/* Tab buttons */}
       <div className="flex flex-wrap justify-center gap-2 mb-4">
