@@ -3,7 +3,7 @@ import React from "react";
 import bgImage from "../assets/bg.jpg";
 import { MapPin, Phone, Mail, Printer, Users } from "lucide-react";
 import { useNavigate ,Link } from "react-router-dom";
-import { contactSections } from "./contactData";
+import { contactSections } from "./ContactDataDetails";
 
 const ContactUsPage = () => {
     const navigate = useNavigate();

@@ -1,7 +1,7 @@
 
 import React from "react";
 import { useParams } from "react-router-dom";
-import { contactSections } from "./contactData";
+import { contactSections } from "./ContactDataDetails";
 
 const ContactDetailPage = () => {
   const { sectionId } = useParams();
@@ -12,7 +12,7 @@ const ContactDetailPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-indigo-100 p-4">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6 text-center">
+        <h1 className="text-3xl md:text-5xl font-bold   text-gray-800 mb-6 text-center">
           {section.title}
         </h1>
 

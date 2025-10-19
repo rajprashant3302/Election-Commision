@@ -2,20 +2,20 @@
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import SectionPage from "./pages/SectionPage"
-import FormsPage from "./Navbar Pages/FormsPage";
-import PoliticalPartiesPage from "./Navbar Pages/PoliticalPartyReg";
-import ElectionSymbols from "./Navbar Pages/ElectionSymbols";
-import Sparrow from "./Navbar Pages/Sparrow";
-import OrganisationChart from "./Navbar Pages/OrganisationChart";
-import TransfersPage from "./Navbar Pages/TransferPage";
-import ContactUsPage from "./Navbar Pages/ContactPage";
-import ContactDetailPage from "./Navbar Pages/ContactDetails";
-import RoEroContact from "./Navbar Pages/RoEroContact";
-import Randomisation from "./Navbar Pages/Randomisation";
-import FlcEvm from "./Navbar Pages/FlcEvm";
-import Workshop from "./Navbar Pages/Workshop";
-import CandidateExpenditure from "./Navbar Pages/CandidateExpenditure";
-import CandidateAffidavits from "./Navbar Pages/CandidateAffidavits";
+import FormsPage from "./Navbar-Pages/FormsPage";
+import PoliticalPartiesPage from "./Navbar-Pages/PoliticalPartyReg";
+import ElectionSymbols from "./Navbar-Pages/ElectionSymbols";
+import Sparrow from "./Navbar-Pages/Sparrow";
+import OrganisationChart from "./Navbar-Pages/OrganisationChart";
+import TransfersPage from "./Navbar-Pages/TransferPage";
+import ContactUsPage from "./Navbar-Pages/ContactPage";
+import ContactDetails from "./Navbar-Pages/ContactDetails";
+import RoEroContact from "./Navbar-Pages/RoEroContact";
+import Randomisation from "./Navbar-Pages/Randomisation";
+import FlcEvm from "./Navbar-Pages/FlcEvm";
+import Workshop from "./Navbar-Pages/Workshop";
+import CandidateExpenditure from "./Navbar-Pages/CandidateExpenditure";
+import CandidateAffidavits from "./Navbar-Pages/CandidateAffidavits";
 
 const routes = [
   {
@@ -56,7 +56,7 @@ const routes = [
   },
   {
     path: "/contact/:sectionId",
-    element: <ContactDetailPage />
+    element: <ContactDetails />
   },
   {
     path: "/ro-ero-contact",
