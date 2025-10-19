@@ -30,6 +30,18 @@ import ElectionStories from "./pages/ElectionStories";
 import FAQs from "./pages/FAQs";
 import LatestNews from "./pages/LatestNews";
 
+// Political Party and ECI Pages
+import NewPartyRegistration from "./pages/PoliticalParty/NewPartyRegistration";
+import ElectionSymbolAllotment from "./pages/PoliticalParty/ElectionSymbolAllotment";
+import Permission from "./pages/PoliticalParty/Permission";
+import Nomination from "./pages/PoliticalParty/Nomination";
+import Affidavit from "./pages/PoliticalParty/Affidavit";
+import ServiceVoterPortal from "./pages/EciOfficial/ServiceVoterPortal";
+import PostalBallots from "./pages/EciOfficial/PostalBallots";
+import Handbook from "./pages/PoliticalParty/Handbook.jsx";
+import Compendium from "./pages/EciOfficial/Compendium.jsx";
+import ObserverPortal from "./pages/EciOfficial/ObserverPortal.jsx";
+
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/sections/:sectionPath", element: <SectionPage /> },
@@ -61,6 +73,21 @@ const routes = [
   { path: "/tender-vacancies", element: <TenderVacancies /> },
   { path: "/election-stories", element: <ElectionStories /> },
   { path: "/faqs", element: <FAQs /> },
+
+  // Political Party Routes
+  { path: "/sections/newpartyregistration", element: <NewPartyRegistration /> },
+  { path: "/sections/electionsymbolallotment", element: <ElectionSymbolAllotment /> },
+  { path: "/sections/nomination", element: <Nomination /> },
+  { path: "/sections/permission", element: <Permission /> },
+  { path: "/sections/affidavit", element: <Affidavit /> },
+
+  // ECI ROUTES
+  { path: "/sections/eci/observerportal", element: <ObserverPortal /> },
+  { path: "/sections/eci/compendium", element: <Compendium /> },
+  { path: "/sections/eci/handbook", element: <Handbook /> },
+  { path: "/sections/eci/postalballots", element: <PostalBallots /> },
+  { path: "/sections/eci/servicevoterportal", element: <ServiceVoterPortal /> },
+
 ];
 
 export { Layout, routes };
