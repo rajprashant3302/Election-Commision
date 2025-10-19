@@ -16,17 +16,17 @@ const sections = [
       { name: "Monthly list of Additions, Modifications & Deletions", link: "https://ceo.bihar.gov.in/monthly-pooling/" },
     ],
   },
-  {//left
+  {//completed
     title: "VOTER INFORMATION",
     path: "voter-information",
     items: [
       { name: "National Voters Day", link: "/national-voters-day" },
-      { name: "Electors Registration (04-Tirhut Graduate Constituency)", link: "/tirhut-graduate-electors-registration" },
-      { name: "GC - Tirhut Electoral Roll (Final Roll W.R.T. 01.11.2024)", link: "/gc-tirhut-electoral-roll" },
-      { name: "TC/GC Electoral Search", link: "/tc-gc-electoral-search" },
-      { name: "Claims and Objections (TC & GC)", link: "/claims-objections-tc-gc" },
-      { name: "Register Complaints", link: "/register-complaints" },
-      { name: "Service Voters and Overseas Voters", link: "/service-overseas-voters" },
+      { name: "Electors Registration (04-Tirhut Graduate Constituency)", link: "https://ceo.bihar.gov.in/tcgconline/" },
+      { name: "GC - Tirhut Electoral Roll (Final Roll W.R.T. 01.11.2024)", link: "https://ceo.bihar.gov.in/GCTCPDFVIEW/" },
+      { name: "TC/GC Electoral Search", link: "https://ceo.bihar.gov.in/tcgcelectorsearch/" },
+      { name: "Claims and Objections (TC & GC)", link: "https://ceo.bihar.gov.in/claim/" },
+      { name: "Register Complaints", link: "https://eci-citizenservices.eci.nic.in/default.aspx" },
+      { name: "Service Voters and Overseas Voters", link: "https://eci.gov.in/voter/service-overseas-voter/" },
       { name: "PwD Voters", link: "/pwd-voters" },
       { name: "SVEEP (Voter’s Education)", link: "/sveep" },
       { name: "Voter Helpline No: 1950", link: "/voter-helpline" },
@@ -45,7 +45,7 @@ const sections = [
       { name: "ERMS", link: "/erms" },
       { name: "Election Law", link: "/election-law" },
       { name: "Model Code of Conduct", link: "/model-code-of-conduct" },
-      { name: "Judicial References", link: "/judicial-references" },
+      { name: "Judicial References", link: "https://www.eci.gov.in/judicial-reference/" },
     ],
   },
   {//lleft
