@@ -29,6 +29,14 @@ import TenderVacancies from "./pages/TenderVacancies";
 import ElectionStories from "./pages/ElectionStories";
 import FAQs from "./pages/FAQs";
 import LatestNews from "./pages/LatestNews";
+import TrainingMaterials from "./Navbar-Pages/TrainingMaterials";
+import ImportantMaps from "./Navbar-Pages/ImportantMaps";
+import RTI from "./Navbar-Pages/RTI";
+import ModelModeOfConduct from "./Navbar-Pages/ModelMode";
+import PastElections from "./Navbar-Pages/PastElections";
+import ElectionPlan from "./Navbar-Pages/ElectionPlan";
+import ImportantInstructions from "./Navbar-Pages/ImportantInstructions";
+import ExGratiaStatusPage from "./Navbar-Pages/ExGratiaStatusPage";
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -52,6 +60,14 @@ const routes = [
   { path: "/voter-helpline", element: <Helpline /> },
   { path: "/national-voters-day", element: <NationalVotersDay /> },
   { path: "/fact-check", element: <FactCheck /> },
+  { path: "/training-materials", element: <TrainingMaterials /> },
+  { path: "/important-maps", element: <ImportantMaps/> },
+  { path: "/rti", element: <RTI/> },
+  { path: "/model-code-of-conduct", element: <ModelModeOfConduct/> },
+  { path: "/past-elections", element: <PastElections/> },
+  { path: "/semp-demp", element: <ElectionPlan/> },
+  { path: "/important-instructions", element: <ImportantInstructions/> },
+  { path: "/ex-gratia-status", element: <ExGratiaStatusPage/> },
 
   // Infotab Pages
   { path: "/latest-news", element: <LatestNews /> },
