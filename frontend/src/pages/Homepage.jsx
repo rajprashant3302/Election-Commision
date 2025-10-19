@@ -183,7 +183,7 @@ const Homepage = () => {
      </Link>
      <Link className='col-span-2 md:col-span-1' to="#">
      <div className="box4 cursor-pointer  border-2 rounded m-2.5 bg-[#E4F6FC] border-[#2BB9E9]  flex flex-col">
-     <div className='flex w-fit md:w-full justify-between gap-5 md:gap-0'>
+     <div style={{display: 'flex'}} className='flex w-fit md:w-full justify-between gap-5 md:gap-5'>
      <div className='p-2 '><img src="/epic_download.jpeg" className='w-20 md:w-32 rounded-[50%]' alt="EF form image"/></div>
      <div>
                 <h3 className='block text-lg font-bold pb-2 pt-2.5 pl-1.5'>E-PIC Download</h3>
