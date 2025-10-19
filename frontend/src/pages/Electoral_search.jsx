@@ -28,7 +28,7 @@ const Electoral_search = () => {
          विवरण द्वारा खोजें/ Search by Details
         </button>
         <button
-          className={`px-4 py-2 rounded ${activeTab === 'tab3' ? ' border-2 bg-[#42a045] border-[#42a045] text-white' : 'border-1 bg-[#42a045] border-[#d28808] text-black'}`}
+          className={`px-4 py-2 rounded ${activeTab === 'tab3' ? ' border-2 bg-[#23ad28] border-[#42a045] text-white' : 'border-1 bg-[#72d375] border-[#42a045] text-black'}`}
           onClick={() => setActiveTab('tab3')}
         >
           मोबाइल द्वारा खोजें/ Search by Mobile

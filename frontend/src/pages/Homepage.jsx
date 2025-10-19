@@ -5,19 +5,19 @@ import Nav from '../Components/Nav'
 const Homepage = () => {
   return (
     <>
-    <div className='parent1 rounded-2xl m-2  grid gap-3 grid-cols-1 md:grid-cols-5'> 
+    <div className='parent1 rounded-2xl m-2  grid  justify-center gap-3 grid-cols-1 md:grid-cols-5'> 
       <div className="forms bg-[#d3e1ee] col-span-3 rounded-2xl">
         <h1 className='bg-blue-800 rounded-t-[16px] text-white p-3 text-xl tracking-widest'>FORMS</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid items-center justify-center grid-cols-1 md:grid-cols-2">
         <div className='box1 md:col-span-2 border-2 rounded m-2.5 bg-[#FBE3E3] border-[#EF4040] flex justify-between '>
             <div className='p-3'><img src="../../src/assets/SIRform.cd9ea3f5f667a3ec673a3c7a2f9a4677.svg" className='w-24' alt="EF form image"/></div>
             <div className='w-full pl-5 pr-2 md:pr-16'>
                 <h3 className='text-xl font-bold pb-2.5 pt-4 pl-1.5'>SIR Final Publication 2025 (Bihar)</h3>
-                <Link to="/sir-finalroll"><button className='btn btn-primary my-2 p-2.5 cursor-pointer w-full block '>Download SIR Final Roll</button></Link>
-                <Link to="/sir-finalroll-for-full-AC"><button className='btn btn-success my-2 p-2.5 cursor-pointer w-full block '>Download SIR Final Roll for full AC</button></Link>
-               <Link to="/sir-finalroll-for-full-AC"> <button className='btn btn-danger my-2 p-2.5 cursor-pointer w-full block '>Download SIR Draft Roll</button></Link>
-                 <Link to="/search-name-draft-roll"> <button className='btn hover:bg-[#a36edd] text-white bg-[#c081ea] my-2 p-2.5 cursor-pointer w-full block '>Search Your Name in Draft Roll</button></Link>
+                <Link to="/sections/electorals/sir-finalroll"><button className='btn btn-primary my-2 p-2.5 cursor-pointer w-full block '>Download SIR Final Roll</button></Link>
+                <Link to="/sections/electorals/sir-finalroll-fullAC"><button className='btn btn-success my-2 p-2.5 cursor-pointer w-full block '>Download SIR Final Roll for full AC</button></Link>
+               <Link to="/sections/electorals/sir-finalroll-fullAC"> <button className='btn btn-danger my-2 p-2.5 cursor-pointer w-full block '>Download SIR Draft Roll</button></Link>
+                 <Link to="/sections/electorals/search-name-draft-roll"> <button className='btn hover:bg-[#a36edd] text-white bg-[#c081ea] my-2 p-2.5 cursor-pointer w-full block '>Search Your Name in Draft Roll</button></Link>
                  <Link to='#' className='w-full my-1 mx-2 hover:underline hover:text-blue-700 flex '>Search Your Name in 2003 Bihar E-roll <img src="../../src/assets/arrow_outward.svg" alt="link_arrow"/> </Link>
                 <Link to='#' className='w-full my-1 mx-2 hover:underline hover:text-blue-700 flex '>Lists of claims and objections  <img src="../../src/assets/arrow_outward.svg" alt="link_arrow"/> </Link>
             </div>
@@ -59,7 +59,7 @@ const Homepage = () => {
         <div className="box4 border-2 rounded m-2.5 bg-[#FBE3E3] border-[#EF4040] flex flex-col gap-3">
 
             <div className='flex w-full justify-between gap-3'>
-            <div className='p-2'><img src="../../src/assets/deletion.svg" className='w-24' alt="EF form image"/></div>
+            <div className='p-2'><img src="../../src/assets/deletion.svg" className='w-20 md:w-24' alt="EF form image"/></div>
             <div>
             <h3 className='block text-lg font-bold pb-2 pt-2.5 pl-1.5'>Deletion</h3>
 
@@ -140,12 +140,12 @@ const Homepage = () => {
       <div className="services bg-[#d3e1ee] col-span-2 rounded-2xl">
         <h3 className='bg-blue-800 rounded-t-[16px] text-white p-3 text-xl tracking-widest'>SERVICES</h3>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
+        <div className='grid items-center justify-center grid-cols-1 md:grid-cols-2 gap-3'>
        
-      <Link to="#">
-      <div className="box1 cursor-pointer transition transform ease-in duration-200 hover:scale-105   border-2 rounded m-2.5 bg-[#E4F6FC] border-[#2BB9E9] flex flex-col ">
-        <div className='flex w-full justify-between gap-3'>
-       <div className='p-2 '><img src="../../src/assets/reg_complaint.jpeg" className='w-28 rounded-[50%]' alt="EF form image"/></div>
+      <Link className='col-span-2 md:col-span-1' to="#">
+      <div className="box1 cursor-pointer  border-2 rounded m-2.5 bg-[#E4F6FC] border-[#2BB9E9] flex flex-col ">
+        <div className='flex w-fit h-fit md:w-full justify-between gap-3'>
+       <div className='p-2 '><img src="../../src/assets/reg_complaint.jpeg" className='w-20 md:w-28 rounded-[50%]' alt="EF form image"/></div>
             <div>
                 <h3 className='block text-lg font-bold pb-2 pt-2.5 pl-1.5'>Register Complaint/ Share Suggestions</h3>
             </div>
@@ -158,9 +158,9 @@ const Homepage = () => {
         </div>
       </Link>
         
-        <Link to="#">
-        <div className="box2  cursor-pointer transition transform ease-in duration-200 hover:scale-105  box7 border-2 rounded m-2.5 bg-[#ffecba] border-[#ffc93a] flex flex-col">
-        <div className='flex w-full justify-between gap-1'>
+      <Link className='col-span-2 md:col-span-1' to="#">
+        <div className="box2 md:min-h-36 h-fit cursor-pointer   border-2 rounded m-2.5 bg-[#ffecba] border-[#ffc93a] flex flex-col">
+        <div className='flex w-fit justify-between gap-5'>
        <div className='p-2 '><img src="../../src/assets/trackApplication.44d58f300a875a5c5732.png" className='w-20 rounded-[50%]' alt="EF form image"/></div>
            <div>
                 <h3 className='block text-lg font-bold pb-2 pt-2.5 pl-1.5'>Track Application Status</h3>
@@ -170,9 +170,9 @@ const Homepage = () => {
         </div>
         </Link>
 
-     <Link to="#">
-     <div className="box3 cursor-pointer transition transform ease-in duration-200 hover:scale-105  box7 border-2 rounded m-2.5 bg-[#ffe5d2] border-[#f88a3c] flex flex-col">
-     <div className='flex w-full justify-between gap-1'>
+        <Link className='col-span-2 md:col-span-1' to="#">
+        <div className="box3 cursor-pointer  border-2 rounded m-2.5 bg-[#ffe5d2] border-[#f88a3c] flex flex-col">
+     <div className='flex w-fit md:w-full justify-between gap-5'>
               <div className='p-2 '><img src="../../src/assets/bookCall.7e1ab82094828c004f21.png" className='w-20 rounded-[50%]' alt="EF form image"/></div>
      <div>
                 <h3 className='block text-lg font-bold pb-2 pt-2.5 pl-1.5'>Book a call with BLO</h3>
@@ -181,10 +181,10 @@ const Homepage = () => {
       </div>
         </div>
      </Link>
-     <Link to="#">
-     <div className="box4 cursor-pointer transition transform ease-in duration-200 hover:scale-105 border-2 rounded m-2.5 bg-[#E4F6FC] border-[#2BB9E9]  flex flex-col">
-     <div className='flex w-full justify-between gap-1'>
-     <div className='p-2 '><img src="../../src/assets/epic_download.jpeg" className='w-28 rounded-[50%]' alt="EF form image"/></div>
+     <Link className='col-span-2 md:col-span-1' to="#">
+     <div className="box4 cursor-pointer  border-2 rounded m-2.5 bg-[#E4F6FC] border-[#2BB9E9]  flex flex-col">
+     <div className='flex w-fit md:w-full justify-between gap-5'>
+     <div className='p-2 '><img src="../../src/assets/epic_download.jpeg" className='w-24 md:w-20 rounded-[50%]' alt="EF form image"/></div>
      <div>
                 <h3 className='block text-lg font-bold pb-2 pt-2.5 pl-1.5'>E-PIC Download</h3>
                 <p className='px-2 mb-2'>Get digital version of your Electoral Photo Identity Card</p>
@@ -193,9 +193,9 @@ const Homepage = () => {
         </div>
      </Link>
      <Link className='col-span-2' to="#">
-     <div className="box5 cursor-pointer transition transform ease-in duration-200 hover:scale-105 border-2 rounded m-2.5 bg-[#fde2f5] border-[#ff64d1] flex flex-col mx-3">
-     <div className='flex w-full justify-between gap-1'>
-    <div className='p-2 '><img src="../../src/assets/searchRoll.1bc6b8dd9653eb34175d.png" className='w-20 rounded-[50%]' alt="EF form image"/></div>
+     <div className="box5 cursor-pointer  border-2 rounded m-2.5 bg-[#fde2f5] border-[#ff64d1] flex flex-col mx-3">
+     <div className='flex w-fit md:w-full justify-between gap-5'>
+    <div className='p-2 '><img src="../../src/assets/searchRoll.1bc6b8dd9653eb34175d.png" className='w-28 md:w-20 rounded-[50%]' alt="EF form image"/></div>
      <div>
                 <h3 className='block text-lg font-bold pb-2 pt-2.5 pl-1.5'>Search Your Name In Voter List </h3>
                 <p className='px-2 mb-2'>Search your name in voter list, know your poll details, know your MP/ MLA </p>
@@ -205,8 +205,8 @@ const Homepage = () => {
 
      </Link>
      <Link className='col-span-2' to="#">
-     <div class="box6 cursor-pointer transition transform ease-in duration-200 hover:scale-105  box7 border-2 rounded m-2.5  bg-[#E4F6FC] border-[#2BB9E9] flex flex-col mx-3">
-     <div className='flex w-full gap-8'>
+     <div class="box6 cursor-pointer  border-2 rounded m-2.5  bg-[#E4F6FC] border-[#2BB9E9] flex flex-col mx-3">
+     <div className='flex w-fit md:w-full justify-between gap-5'>
      <div className='p-2 '><img src="../../src/assets/epic_download.jpeg" className='w-20 rounded-[50%]' alt="EF form image"/></div>
      <div>
                 <h3 className='block text-lg font-bold pb-2 pt-2.5 pl-1.5'>Download Electoral Roll</h3>
@@ -265,12 +265,12 @@ const Homepage = () => {
       </div>
     </div>
 
-    <div className='parent2 bg-[#d3e1ee] mx-2 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-3'>
-    <div className="box1 relative border-2 rounded m-2.5 bg-[#DBF7C4] border-[#64C118] flex flex-col w-full">
+    <div className='parent2 bg-[#d3e1ee] mx-2 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-3 items-center justify-center'>
+    <div className="box1 scale-95 mx-auto col-span-2 md:col-span-1 relative border-2 rounded m-2.5 bg-[#DBF7C4] border-[#64C118] flex flex-col w-full">
         <h3 className='text-lg font-bold pt-2.5 pl-1.5 flex mx-3'>Updates</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 p-3">
+        <div className="grid items-center justify-center grid-cols-1 md:grid-cols-2 gap-3 p-3">
            <div>
-             <div className='flex w-full justify-between gap-3'>    
+             <div className='flex w-fit justify-between gap-5'>    
              <div className='p-2 '><img src="../../src/assets/electionsIconNew.0ee780bb65ad5d1fc83222fec985d66b.svg" className='w-28 rounded-[0%]' alt="EF form image"/></div>
              <div>
                 <h4 className='text-lg font-bold pt-2.5 flex mx-2'>Elections</h4>
@@ -280,8 +280,8 @@ const Homepage = () => {
             <Link to='#'><button className='btn text-sm items-center gap-1 bg-[#ebeaea] text-black hover:bg-[#ffffff] text-nowrap h-fit my-2 mx-1 mt-3 flex'>View Information <img src="../../src/assets/arrow_outward.svg" alt="link_arrow"/></button></Link>
             </div>
            <div>
-             <div className='flex  w-full justify-between gap-3'>
-             <div className='p-2'><img src="../../src/assets/electionsResultIcon.b7c5e900e23622a88613106cb9ae8717.svg" className='w-36 rounded-[0%]' alt="EF form image"/></div>
+             <div className='flex  w-fit justify-between gap-5'>
+             <div className='p-2'><img src="../../src/assets/electionsResultIcon.b7c5e900e23622a88613106cb9ae8717.svg" className='w-32 rounded-[0%]' alt="EF form image"/></div>
              <div>
                 <h4 className='text-lg font-bold pt-2.5 flex mx-2'>Elections Results</h4>
                 <p className='p-2'>View current election results or view past election results and statistical report.</p>
@@ -298,14 +298,14 @@ const Homepage = () => {
         </div>
     </div>
 
-    <div className="box2 rela border-2 rounded m-2.5  bg-[#FDE2F5] border-[#FF64D1] flex flex-col h-fit">
+    <div className="box2  border-2 rounded m-2.5  bg-[#FDE2F5] border-[#FF64D1] flex flex-col h-fit">
         <h3 className='text-lg font-bold pt-2.5 pl-2.5 flex mx-3'>About ECI</h3>
         <p className='p-2 mx-3'>The Election Commission of India is an autonomous constitutional authority responsible for administering Union and State election processes in India. The body administers elections to the Lok Sabha, Rajya Sabha, State Legislative Assemblies in India, and the offices of the President and Vice President in the country.</p>
         <Link to='#'><button className='btn text-sm items-center gap-1 bg-[#ebeaea] text-black hover:bg-[#ffffff] text-nowrap h-fit my-2 mx-3 mt-3 flex'>Read More <img src="../../src/assets/arrow_outward.svg" alt="link_arrow"/></button></Link>
         </div>
     <div className="box3 col-span-2 mx-2 border-2 rounded m-2.5  bg-[#FDE2F5] border-[#FF64D1] flex flex-col h-fit w-fit">
         <h3 className='text-lg font-bold pt-2.5 pl-1.5 flex mx-3'>Contact</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 justify-between p-3">
+      <div className="grid  grid-cols-1 md:grid-cols-3 justify-between p-3">
       <div>
             <div>
                 <div className='flex items-center gap-2'>
@@ -349,11 +349,7 @@ const Homepage = () => {
             <Link className='underline cursor-pointer text-blue-700' to="#">Contact Directory</Link>
             </div>
         </div>
-        <div className='text-center rounded-b-2xl p-3 text-white bg-purple-500 mb-4'>
-        Copyright ECI 2025. All Rights Reserved.
-        <Link className='underline mx-1' to="#"> Privacy Policy</Link>
-   
-        </div>
+       
     </div>
     </>
   )

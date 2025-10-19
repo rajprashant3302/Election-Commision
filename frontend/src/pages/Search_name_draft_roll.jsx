@@ -56,7 +56,7 @@ const Search_name_draft_roll = () => {
   return (
   <>
     <h2 className="text-lg  w-fit bg-purple-600  px-3 mx-auto rounded py-2 font-semibold mt-16 text-white ">Search your Name In Draft Roll</h2>
-    <div className="bg-white rounded-xl shadow-md pb-6 px-10 max-w-2xl mx-auto border border-gray-200">
+    <div className="bg-white mb-10 rounded-xl shadow-md pb-6 px-10 max-w-2xl mx-auto border border-gray-200">
 
       <form onSubmit={handleSearch} className="space-y-5">
         {/* State */}
@@ -108,7 +108,7 @@ const Search_name_draft_roll = () => {
               <button
                 type="button"
                 onClick={refreshCaptcha}
-                className="text-sm px-3 py-2 bg-gray-100 border rounded hover:bg-gray-200 transition"
+                className="text-sm px-3 py-2 btn scale-90 btn-success text-white rounded-lg"
                 aria-label="Refresh captcha"
               >
                 Refresh
@@ -154,6 +154,7 @@ const Search_name_draft_roll = () => {
         </div>
       </form>
     </div>
+
   </>
   );
 };

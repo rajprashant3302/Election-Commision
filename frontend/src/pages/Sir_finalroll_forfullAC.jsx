@@ -253,7 +253,7 @@ const Sir_finalroll_forfullAC = () => {
   return (
     <>
 
-      <div className="mt-10 bg-blue-200 rounded-xl shadow-lg p-8 max-w-3xl mx-auto border border-gray-200">
+      <div className="mt-10 mb-10 bg-blue-200 rounded-xl shadow-lg p-8 max-w-3xl mx-auto border border-gray-200">
         <h2 className="text-2xl font-semibold mb-6 text-center text-blue-950">
           Bihar SIR Final Roll 2025
         </h2>
@@ -285,6 +285,7 @@ const Sir_finalroll_forfullAC = () => {
           ))}
         </div>
       </div>
+      
     </>
   );
 };

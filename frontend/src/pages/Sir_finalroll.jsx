@@ -50,7 +50,7 @@ Captcha: ${captcha}`);
       <h2 className="text-xl py-2 px-5 font-bold mb-6 bg-blue-300 text-gray-700">
         Search Electoral Roll
       </h2>
-    <div className="bg-white mt-10 rounded-xl shadow-lg p-8 max-w-3xl mx-auto border border-gray-200">
+    <div className="bg-white mt-10 mb-10 rounded-xl shadow-lg p-8 max-w-3xl mx-auto border border-gray-200">
     <h4 className="text-red-600 mb-5 text-center font-bold">SIR final roll has been published. Select roll type "SIR Final Roll - 2025" to download the roll</h4>
       <form onSubmit={handleSearch} className="space-y-6">
         {/* State */}
@@ -161,13 +161,7 @@ Captcha: ${captcha}`);
               <div className="border p-2 text-xl text-green-700 font-mono text-center rounded-lg select-none bg-gray-50 w-32">
                 {generatedCaptcha}
               </div>
-              <button
-                type="button"
-                onClick={refreshCaptcha}
-                className="text-blue-500 underline font-semibold"
-              >
-                Refresh
-              </button>
+          
             </div>
           </div>
 
@@ -183,6 +177,13 @@ Captcha: ${captcha}`);
               className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400 outline-none"
             />
           </div>
+          <button
+                type="button"
+                onClick={refreshCaptcha}
+                className="mt-2 text-sm btn btn-success w-fit text-white  "
+                >
+                Refresh
+              </button>
         </div>
 
         {/* Buttons */}
@@ -203,6 +204,7 @@ Captcha: ${captcha}`);
         </div>
       </form>
     </div>
+    
     </>);
 };
 

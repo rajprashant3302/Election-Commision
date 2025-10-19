@@ -1,21 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+// Helper function to generate random captcha
+const generateCaptcha = (length = 6) => {
+  const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+  let captcha = "";
+  for (let i = 0; i < length; i++) {
+    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return captcha;
+};
 
 const Tab3Content = () => {
   const [phone, setPhone] = useState("");
-  const [captcha, setCaptcha] = useState("");
+  const [captchaInput, setCaptchaInput] = useState("");
+  const [captchaCode, setCaptchaCode] = useState(generateCaptcha());
+
+  useEffect(() => {
+    setCaptchaCode(generateCaptcha());
+  }, []);
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (!phone || !captcha) {
+    if (!phone || !captchaInput) {
       alert("⚠️ Please fill all required fields.");
       return;
     }
-    alert(`Searching Voter with Phone: ${phone}\nCaptcha: ${captcha}`);
+
+    if (captchaInput !== captchaCode) {
+      alert("❌ Captcha does not match. Please try again.");
+      setCaptchaCode(generateCaptcha()); // generate new captcha on failure
+      setCaptchaInput("");
+      return;
+    }
+
+    alert(`✅ Searching Voter with Phone: ${phone}`);
+    // API call logic can go here
   };
 
   const handleClear = () => {
     setPhone("");
-    setCaptcha("");
+    setCaptchaInput("");
+    setCaptchaCode(generateCaptcha()); // regenerate captcha
+  };
+
+  const refreshCaptcha = () => {
+    setCaptchaCode(generateCaptcha());
   };
 
   return (
@@ -48,8 +77,9 @@ const Tab3Content = () => {
               Captcha Code <span className="text-red-500">*</span>
             </label>
             <div className="border p-2 text-xl text-green-700 font-mono text-center rounded-lg select-none bg-gray-50">
-              a8x4kz
+              {captchaCode}
             </div>
+            
           </div>
 
           <div>
@@ -58,12 +88,19 @@ const Tab3Content = () => {
             </label>
             <input
               type="text"
-              value={captcha}
-              onChange={(e) => setCaptcha(e.target.value)}
+              value={captchaInput}
+              onChange={(e) => setCaptchaInput(e.target.value)}
               placeholder="Enter Captcha"
               className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400 outline-none"
             />
           </div>
+          <button
+              type="button"
+              onClick={refreshCaptcha}
+              className="mt-2 text-sm btn btn-success w-fit text-white  "
+            >
+              Refresh Captcha
+            </button>
         </div>
 
         {/* Buttons */}

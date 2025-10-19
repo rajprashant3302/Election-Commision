@@ -1,4 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+// Helper function to generate random captcha
+const generateCaptcha = (length = 6) => {
+  const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+  let captcha = "";
+  for (let i = 0; i < length; i++) {
+    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return captcha;
+};
 
 const Tab2Content = () => {
   const [name, setName] = useState("");
@@ -7,30 +17,13 @@ const Tab2Content = () => {
   const [age, setAge] = useState("");
   const [district, setDistrict] = useState("");
   const [assemblyConstituency, setAssemblyConstituency] = useState("");
-  const [captcha, setCaptcha] = useState("");
+  const [captchaInput, setCaptchaInput] = useState("");
+  const [captchaCode, setCaptchaCode] = useState(generateCaptcha());
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (!name || !relativeName || !gender || !age || !district || !assemblyConstituency || !captcha) {
-      alert("⚠️ Please fill all required fields.");
-      return;
-    }
-    alert(
-      `Searching Voter Details:\nName: ${name}\nRelative: ${relativeName}\nGender: ${gender}\nAge: ${age}\nDistrict: ${district}\nAssembly: ${assemblyConstituency}\nCaptcha: ${captcha}`
-    );
-  };
+  useEffect(() => {
+    setCaptchaCode(generateCaptcha());
+  }, []);
 
-  const handleClear = () => {
-    setName("");
-    setRelativeName("");
-    setGender("");
-    setAge("");
-    setDistrict("");
-    setAssemblyConstituency("");
-    setCaptcha("");
-  };
-
-  // Example Districts and AC list (you can replace these with dynamic data)
   const districts = [
     "Patna",
     "Nalanda",
@@ -48,6 +41,48 @@ const Tab2Content = () => {
     "Fatuha",
     "Barh",
   ];
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (
+      !name ||
+      !relativeName ||
+      !gender ||
+      !age ||
+      !district ||
+      !assemblyConstituency ||
+      !captchaInput
+    ) {
+      alert("⚠️ Please fill all required fields.");
+      return;
+    }
+
+    if (captchaInput !== captchaCode) {
+      alert("❌ Captcha does not match. Please try again.");
+      setCaptchaCode(generateCaptcha()); // regenerate captcha
+      setCaptchaInput("");
+      return;
+    }
+
+    alert(
+      `✅ Searching Voter Details:\nName: ${name}\nRelative: ${relativeName}\nGender: ${gender}\nAge: ${age}\nDistrict: ${district}\nAssembly: ${assemblyConstituency}`
+    );
+  };
+
+  const handleClear = () => {
+    setName("");
+    setRelativeName("");
+    setGender("");
+    setAge("");
+    setDistrict("");
+    setAssemblyConstituency("");
+    setCaptchaInput("");
+    setCaptchaCode(generateCaptcha()); // regenerate captcha
+  };
+
+  const refreshCaptcha = () => {
+    setCaptchaCode(generateCaptcha());
+  };
 
   return (
     <div className="bg-white rounded-xl shadow-lg p-8 max-w-3xl mx-auto border border-gray-200">
@@ -185,8 +220,9 @@ const Tab2Content = () => {
               Captcha Code <span className="text-red-500">*</span>
             </label>
             <div className="border p-2 text-xl text-green-700 font-mono text-center rounded-lg select-none bg-gray-50">
-              f6zej3
+              {captchaCode}
             </div>
+        
           </div>
           <div>
             <label className="block font-semibold mb-1">
@@ -194,12 +230,19 @@ const Tab2Content = () => {
             </label>
             <input
               type="text"
-              value={captcha}
-              onChange={(e) => setCaptcha(e.target.value)}
+              value={captchaInput}
+              onChange={(e) => setCaptchaInput(e.target.value)}
               placeholder="Enter Captcha"
               className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400 outline-none"
             />
           </div>
+          <button
+              type="button"
+              onClick={refreshCaptcha}
+              className="mt-2 text-sm btn btn-success w-fit text-white  "
+            >
+              Refresh Captcha
+            </button>
         </div>
 
         {/* Buttons */}
