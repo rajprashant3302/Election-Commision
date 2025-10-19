@@ -11,6 +11,11 @@ import TransfersPage from "./Navbar Pages/TransferPage";
 import ContactUsPage from "./Navbar Pages/ContactPage";
 import ContactDetailPage from "./Navbar Pages/ContactDetails";
 import RoEroContact from "./Navbar Pages/RoEroContact";
+import Randomisation from "./Navbar Pages/Randomisation";
+import FlcEvm from "./Navbar Pages/FlcEvm";
+import Workshop from "./Navbar Pages/Workshop";
+import CandidateExpenditure from "./Navbar Pages/CandidateExpenditure";
+import CandidateAffidavits from "./Navbar Pages/CandidateAffidavits";
 
 const routes = [
   {
@@ -43,20 +48,40 @@ const routes = [
   },
   {
     path: "/transfers-promotions",
-    element:<TransfersPage/> ,
+    element: <TransfersPage />,
   },
   {
-    path : "/contact-us",
-    element: <ContactUsPage/>
+    path: "/contact-us",
+    element: <ContactUsPage />
   },
   {
-     path :"/contact/:sectionId" ,
-     element : <ContactDetailPage />
+    path: "/contact/:sectionId",
+    element: <ContactDetailPage />
   },
   {
-    path : "/ro-ero-contact",
-    element : <RoEroContact/>
-  }
+    path: "/ro-ero-contact",
+    element: <RoEroContact />
+  },
+  {
+    path: "/evm-randomisation-list",
+    element: <Randomisation />
+  },
+  {
+    path: "/flc-ok-evms",
+    element: <FlcEvm />
+  },
+  {
+    path: "/workshops-events",
+    element: <Workshop />
+  },
+  {
+    path: "/expenditure-balance-sheets",
+    element: <CandidateExpenditure />
+  },
+  {
+  path: "/candidate-affidavits",
+  element: <CandidateAffidavits />
+},
 ];
 
 export { Layout, routes };

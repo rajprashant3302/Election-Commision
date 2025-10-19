@@ -1,5 +1,5 @@
 const sections = [
-  {
+  {//completed
     title: "VOTER'S CORNER",
     path: "voters-corner",
     items: [
@@ -16,7 +16,7 @@ const sections = [
       { name: "Monthly list of Additions, Modifications & Deletions", link: "https://ceo.bihar.gov.in/monthly-pooling/" },
     ],
   },
-  {
+  {//left
     title: "VOTER INFORMATION",
     path: "voter-information",
     items: [
@@ -33,7 +33,7 @@ const sections = [
       { name: "Fact Check", link: "/fact-check" },
     ],
   },
-  {
+  {//left
     title: "ELECTIONS",
     path: "elections",
     items: [
@@ -48,22 +48,22 @@ const sections = [
       { name: "Judicial References", link: "/judicial-references" },
     ],
   },
-  {
+  {//lleft
     title: "MEDIA/PUBLICATION",
     path: "media-publication",
     items: [
       { name: "Workshop/Events", link: "/workshops-events" },
       { name: "Media Corner", link: "/media-corner" },
-      { name: "Statistical Report", link: "/statistical-report" },
-      { name: "Compendium of Instructions", link: "/compendium" },
+      { name: "Statistical Report", link: "https://www.eci.gov.in/statistical-reports" },
+      { name: "Compendium of Instructions", link: "https://eci.gov.in/files/category/8-compendium-of-instructions/" },
       { name: "Press Release", link: "/press-release" },
-      { name: "Handbooks/ Manuals/ Model Check List", link: "/handbooks-manuals" },
+      { name: "Handbooks/ Manuals/ Model Check List", link: "https://www.eci.gov.in/error " },
       { name: "Latest News", link: "/latest-news" },
       { name: "Right to Information", link: "/rti" },
       { name: "Tender", link: "/tender" },
     ],
   },
-  {
+  {//completed
     title: "CANDIDATE/POLITICAL PARTIES",
     path: "candidate-parties",
     items: [
@@ -75,19 +75,19 @@ const sections = [
       { name: "List of Disqualified Persons", link: "https://ceoelection.bihar.gov.in/pdf/List_of_Disqualified_Persons.pdf" },
     ],
   },
-  {
+  {//completed
     title: "EVM/VVPAT",
     path: "evm-vvpat",
     items: [
       { name: "List of EVMs after First & Second Randomisation for General Elections 2024", link: "/evm-randomisation-list" },
-      { name: "Credibility of EVM", link: "/evm-credibility" },
-      { name: "EVM Brochure for Electors", link: "/evm-brochure-electors" },
-      { name: "EVM Brochure for Presiding Officers", link: "/evm-brochure-officers" },
-      { name: "EVM Brochure for Candidates and Political Parties", link: "/evm-brochure-candidates" },
+      { name: "Credibility of EVM", link: "https://ceoelection.bihar.gov.in/CredibilityOfEVM/EVMPressNote.pdf" },
+      { name: "EVM Brochure for Electors", link: "https://ceoelection.bihar.gov.in/pdf/EVM/EVM%20BROCHURE%20FOR%20ELECTORS%202023.pdf" },
+      { name: "EVM Brochure for Presiding Officers", link: "https://ceoelection.bihar.gov.in/pdf/EVM/EVM%20Brochure-PO-2023.pdf" },
+      { name: "EVM Brochure for Candidates and Political Parties", link: "https://ceoelection.bihar.gov.in/pdf/EVM/EVM%20Brochure%20for%20Candidates%20and%20Political%20Parties%202024.pdf" },
       { name: "FLC OK EVMs for Upcoming Lok Sabha Election 2024", link: "/flc-ok-evms" },
     ],
   },
-  {
+  {//completed
     title: "CEO OFFICIALS",
     path: "ceo-officials",
     items: [
@@ -102,7 +102,7 @@ const sections = [
       { name: "Contact Us", link: "/contact-us" },
     ],
   },
-  {
+  {//left
     title: "REFERENCE MATERIAL",
     path: "reference-material",
     items: [
