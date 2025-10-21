@@ -46,10 +46,10 @@ const EciMenu = () => {
               <span className="hidden md:flex md:items-center md:gap-1 border-r px-2 border-white">
                 <IoCall /> Toll Free - 1950
               </span>
-              <FaFacebook className="hover:text-blue-400 transition" />
-              <FaInstagram className="hover:text-pink-400 transition" />
-              <FaXTwitter className="hover:text-black transition" />
-              <FaYoutube className="hover:text-red-500 transition" />
+              <FaFacebook className="hover:text-blue-400 transition cursor-pointer" />
+              <FaInstagram className="hover:text-pink-400 transition cursor-pointer" />
+              <FaXTwitter className="hover:text-black transition cursor-pointer" />
+              <FaYoutube className="hover:text-red-500 transition cursor-pointer" />
             </div>
             <div className="flex items-center gap-3">
               <a

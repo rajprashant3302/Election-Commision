@@ -6,6 +6,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -38,7 +39,7 @@ const Footer = () => {
               <ul className="space-y-1 text-sm font-semibold">
                 <li>
                   <a
-                    href="#"
+                    href="https://www.eci.gov.in/"
                     className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     Election Commission of India
@@ -46,23 +47,23 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://nvsp.in/"
                     className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     Voter Portal
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/fact-check"
                     className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     Facts Check
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://state.bihar.gov.in/main/CitizenHome.html"
                     className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     Bihar State Portal
@@ -78,23 +79,23 @@ const Footer = () => {
               <ul className="space-y-1 text-sm font-semibold">
                 <li>
                   <a
-                    href="#"
+                    href="https://nvsp.in/"
                     className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     Apply for VOTER CARD
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/formpage"
                     className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     Download Forms
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://eci.gov.in/statistical-report/statistical-reports/"
                     className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     ECI Results
@@ -117,16 +118,16 @@ const Footer = () => {
               </h4>
               <ul className="space-y-1 text-sm font-semibold">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/voter-helpline"
                     className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     Voter Helpline No: 1950
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://eci-citizenservices.eci.nic.in/"
                     className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     National Grievance Service
@@ -134,19 +135,19 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://play.google.com/store/apps/details?id=in.nic.eci.cvigil"
                     className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     cVIGIL Mobile App
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/contact-us"
                     className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -188,15 +189,38 @@ const Footer = () => {
 
         {/* Footer bottom */}
         <div className="mt-8 text-center text-sm font-semibold">
-          <p>
-            Home &nbsp; |&nbsp; Gallery &nbsp;|&nbsp; Assets Declaration
-            &nbsp;|&nbsp; ECI Mobile Apps &nbsp; |&nbsp; Contact Us
-            &nbsp;|&nbsp; Site Map
+          <p className="flex flex-wrap justify-center gap-3">
+            <Link to="/" className="hover:text-yellow-300 transition-colors duration-200">
+              Home
+            </Link>
+            <span>|</span>
+            <Link to="/gallery" className="hover:text-yellow-300 transition-colors duration-200">
+              Gallery
+            </Link>
+            <span>|</span>
+            <Link to="/assets-declaration" className="hover:text-yellow-300 transition-colors duration-200">
+              Assets Declaration
+            </Link>
+            <span>|</span>
+            <Link to="/eci-apps" className="hover:text-yellow-300 transition-colors duration-200">
+              ECI Mobile Apps
+            </Link>
+            <span>|</span>
+            <Link to="/contact-us" className="hover:text-yellow-300 transition-colors duration-200">
+              Contact Us
+            </Link>
+            <span>|</span>
+            <Link to="/site-map" className="hover:text-yellow-300 transition-colors duration-200">
+              Site Map
+            </Link>
           </p>
+
           <p className="mt-1">
             Copyright © Office of the Chief Electoral Officer, Bihar.
           </p>
         </div>
+
+
       </div>
     </footer>
   );
