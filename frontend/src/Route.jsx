@@ -20,6 +20,7 @@ import Sweep from "./Navbar-Pages/Sweep";
 import Helpline from "./Navbar-Pages/Helpline";
 import NationalVotersDay from "./Navbar-Pages/NationalVotersDay";
 import FactCheck from "./Navbar-Pages/FactCheck";
+import Electors from "./pages/Electors";// for electors page
 
 // Infotab Pages
 import CurrentIssues from "./pages/CurrentIssues";
@@ -88,6 +89,7 @@ const routes = [
   { path: "/semp-demp", element: <ElectionPlan /> },
   { path: "/important-instructions", element: <ImportantInstructions /> },
   { path: "/ex-gratia-status", element: <ExGratiaStatusPage /> },
+  
 
   // Infotab Pages
   { path: "/latest-news", element: <LatestNews /> },
@@ -118,6 +120,8 @@ const routes = [
   { path: "/sections/electorals/sir-finalroll", element: <Sir_finalroll /> },
   { path: "/sections/electorals/sir-finalroll-fullAC", element: <Sir_finalroll_forfullAC /> },
   { path: "/sections/electorals/search-name-draft-roll", element: <Search_name_draft_roll /> },
+  { path: "/electors", element: <Electors /> },
+
 
 
 ];

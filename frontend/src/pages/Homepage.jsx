@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import NavMenu from '../Components/NavMenu'
 import Nav from '../Components/Nav'
+
 const Homepage = () => {
   return (
     <>
@@ -215,6 +216,21 @@ const Homepage = () => {
      </div>
         </div>
      </Link>
+     
+     <Link className='col-span-2 md:col-span-1' to="/sections/electorals/homepage">
+  <div className="boxElectors cursor-pointer border-2 rounded m-2.5 bg-[#E4F6FC] border-[#2BB9E9] flex flex-col">
+    <div className='flex w-fit md:w-full justify-between gap-3'>
+      <div className='p-2 '>
+        <img src="/electors_icon.svg" className='w-20 rounded-[50%]' alt="Electors" />
+      </div>
+      <div>
+        <h3 className='block text-lg font-bold pb-2 pt-2.5 pl-1.5'>Electors</h3>
+        <p className='px-2 mb-2'>View information related to registered electors.</p>
+      </div>
+    </div>
+  </div>
+</Link>
+
 
         <hr className='col-span-2'/>
         <Link className='col-span-2' to="#">
