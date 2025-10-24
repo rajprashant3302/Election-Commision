@@ -69,3 +69,21 @@ a {
   transform: translateY(2px) scale(0.98);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradient-flow 15s ease infinite;
+}
+@keyframes float-subtle {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+.floating-icon {
+  animation: float-subtle 6s ease-in-out infinite;
+}
