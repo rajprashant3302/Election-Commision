@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react"; // Import useCallback for memoizing the function
 import {
   UserIcon,
   StarIcon,
@@ -7,11 +7,10 @@ import {
   DocumentTextIcon, 
   MegaphoneIcon,    
   UsersIcon,        
-  WrenchScrewdriverIcon, 
-  DevicePhoneMobileIcon, // For "Register Complaint" (to better match the image)
+  DevicePhoneMobileIcon,
 } from "@heroicons/react/24/outline";
 
-// --- Reusable Card Component (Previous Cards - Unchanged) ---
+// --- Reusable Card Components (Unchanged for brevity) ---
 const ResponsiveCard = ({ title, subtitle, description, icon: Icon, className }) => {
   return (
     <div
@@ -40,24 +39,17 @@ const ResponsiveCard = ({ title, subtitle, description, icon: Icon, className })
     </div>
   );
 };
-// ------------------------------------
 
-
-// --- NEW FeatureCard Component (Exact Design from Video/Image) ---
 const FeatureCard = ({ title, description, icon: Icon, iconBgColorClass }) => {
-    // Determine the icon color based on the background for contrast
-    const iconColorClass = iconBgColorClass === "bg-blue-600" ? "text-white" : "text-white"; 
-
     return (
         <div
             className="relative flex flex-col sm:flex-row bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer
                        transition-all duration-300 group"
         >
-            {/* Icon Area (Fixed width/height for small screens, takes up full width for large) */}
+            {/* Icon Area */}
             <div 
                 className={`relative flex-shrink-0 w-full h-32 sm:h-auto sm:w-1/3 p-6 flex items-center justify-center 
                             ${iconBgColorClass} 
-                            // Add upward translate on hover
                             group-hover:-translate-y-2 transition-transform duration-300`}
             >
                 <Icon className="w-16 h-16 text-white" />
@@ -68,7 +60,7 @@ const FeatureCard = ({ title, description, icon: Icon, iconBgColorClass }) => {
                 <h3 className="text-xl font-bold text-gray-900 mb-1">{title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
                 
-                {/* Fixed App Icons (as seen in the image/video) */}
+                {/* Fixed App Icons */}
                 <div className="flex items-center gap-2 mt-4">
                     <span className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-semibold">
                       <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zM9 13a1 1 0 112 0 1 1 0 01-2 0zm1-8a1 1 0 011 1v4a1 1 0 11-2 0V6a1 1 0 011-1z"/></svg>
@@ -81,10 +73,19 @@ const FeatureCard = ({ title, description, icon: Icon, iconBgColorClass }) => {
         </div>
     );
 };
-// ------------------------------------
+// -----------------------------------------------------------
 
 
 export default function Electors() {
+  // --- Improved Scroll Functionality using useCallback and Fallback ---
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+  // -----------------------------
+
   const services = [
     { number: 1, title: "Register in Electoral Roll", description: "Register Online or Download the Form for Registration" },
     { number: 2, title: "Track Application Status", description: "Track Status of Applications Submitted for Registration/Updation in E Roll." },
@@ -99,67 +100,67 @@ export default function Electors() {
     {
       title: "Search Your Name in",
       subtitle: "Electoral Roll",
+      icon: MagnifyingGlassIcon,
       description: "Find your name in Electoral Roll",
-      icon: MagnifyingGlassIcon
     },
     {
       title: "Know Your",
       subtitle: "PC/AC, Polling Station, ERO, BLO",
+      icon: StarIcon,
       description: "You may know your Polling Stations details by providing Voter ID (EPIC NO.) number",
-      icon: StarIcon
     },
     {
       title: "Service",
       subtitle: "Voter",
+      icon: UserIcon,
       description: "Registration of Service Voters",
-      icon: UserIcon
     },
     {
       title: "Overseas",
       subtitle: "Voters",
+      icon: CheckCircleIcon,
       description: "Enroll yourself as Overseas Elector",
-      icon: CheckCircleIcon
     }
   ];
 
-  // New data for the Feature Cards
   const featureCardsData = [
     {
       title: "Download Forms for Registration / Updation in E-Roll",
       description: "Download physical forms",
       icon: DocumentTextIcon,
-      iconBgColorClass: "bg-blue-600", // Blue color
+      iconBgColorClass: "bg-blue-600",
     },
     {
       title: "Know your Candidate",
       description: "Find the complete details for candidates including affidavit and Personal Details",
-      icon: UserIcon, // Changed icon to UserIcon to better match the image
-      iconBgColorClass: "bg-purple-600", // Purple/Magenta color
+      icon: UserIcon,
+      iconBgColorClass: "bg-purple-600",
     },
     {
       title: "cVIGIL : Citizen Vigilance",
       description: "Register complaint against MCC Violation",
-      icon: UserIcon, // Changed icon to UserIcon to better match the image
-      iconBgColorClass: "bg-blue-600", // Blue color
+      icon: UsersIcon,
+      iconBgColorClass: "bg-blue-600",
     },
     {
       title: "Register Complaint",
       description: "Register your grievance with ECI",
-      icon: DevicePhoneMobileIcon, // Changed icon to Phone/Mobile to better match the image
-      iconBgColorClass: "bg-purple-600", // Purple/Magenta color
+      icon: DevicePhoneMobileIcon,
+      iconBgColorClass: "bg-purple-600",
     }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Header - Unchanged */}
+        {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Electors</h1>
           <div className="w-16 h-1 bg-pink-600 mx-auto mt-2"></div>
         </div>
 
-        {/* Main Content (Image & Services List) - Unchanged */}
+        {/* --- All sections containing content --- */}
+        {/* ... (First two sections) ... */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-16">
           <div className="relative overflow-hidden h-full">
             <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-pink-700 rounded-lg transform -rotate-1"></div>
@@ -198,7 +199,6 @@ export default function Electors() {
           </div>
         </div>
 
-        {/* Previous New Section with Gradient Background - Unchanged */}
         <div className="bg-gradient-to-br from-blue-900 via-purple-800 to-purple-900 rounded-3xl p-8 lg:p-12 mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="flex justify-center lg:justify-start">
@@ -228,7 +228,6 @@ export default function Electors() {
           </div>
         </div>
 
-        {/* --- NEW SECTION FOR THE FOUR NEW CARDS (The requested layout) --- */}
         <div className="max-w-7xl mx-auto py-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featureCardsData.map((card, index) => (
@@ -242,9 +241,15 @@ export default function Electors() {
             ))}
           </div>
         </div>
+        {/* --- End of sections containing content --- */}
 
-        {/* Scroll to Top Button - Unchanged */}
-        <button className="fixed bottom-8 right-8 w-12 h-12 bg-purple-500 hover:bg-purple-600 text-white rounded-full shadow-lg flex items-center justify-center transition-colors">
+
+        {/* Scroll to Top Button (FIXED - using the improved function) */}
+        <button 
+          type="button"
+          className="fixed bottom-8 right-8 w-12 h-12 bg-purple-500 hover:bg-purple-600 text-white rounded-full shadow-lg flex items-center justify-center transition-colors z-50"
+          onClick={scrollToTop} 
+        >
           <svg
             className="w-6 h-6"
             fill="none"
