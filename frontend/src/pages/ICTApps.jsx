@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import CategoryBar from '../components/Imagebar';
+import CategoryBar from '../Components/Imagebar';
 // --- DATA (UPDATED with Platform and Target Audience) ---
 const mobileAppsData = [
   {
