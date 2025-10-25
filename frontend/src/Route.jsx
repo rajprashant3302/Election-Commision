@@ -57,6 +57,13 @@ import Sir_finalroll from "./pages/Sir_finalroll";
 import Sir_finalroll_forfullAC from "./pages/Sir_finalroll_forfullAC";
 import Search_name_draft_roll from "./pages/Search_name_draft_roll";
 
+//SEARCH PAGES
+import SearchName2003 from "./pages/SearchName2003.jsx";
+import NavSearch from "./pages/NavSearch.jsx";
+
+//CATEGORY PAGES
+import ICTApps from "./pages/ICTApps.jsx";
+
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -100,7 +107,10 @@ const routes = [
 
   // Political Party Routes
   { path: "/sections/newpartyregistration", element: <NewPartyRegistration /> },
-  { path: "/sections/electionsymbolallotment", element: <ElectionSymbolAllotment /> },
+  {
+    path: "/sections/electionsymbolallotment",
+    element: <ElectionSymbolAllotment />,
+  },
   { path: "/sections/nomination", element: <Nomination /> },
   { path: "/sections/permission", element: <Permission /> },
   { path: "/sections/affidavit", element: <Affidavit /> },
@@ -116,10 +126,22 @@ const routes = [
   { path: "/sections/electorals/homepage", element: <Homepage /> },
   { path: "/sections/electorals/search", element: <Electoral_search /> },
   { path: "/sections/electorals/sir-finalroll", element: <Sir_finalroll /> },
-  { path: "/sections/electorals/sir-finalroll-fullAC", element: <Sir_finalroll_forfullAC /> },
-  { path: "/sections/electorals/search-name-draft-roll", element: <Search_name_draft_roll /> },
+  {
+    path: "/sections/electorals/sir-finalroll-fullAC",
+    element: <Sir_finalroll_forfullAC />,
+  },
+  {
+    path: "/sections/electorals/search-name-draft-roll",
+    element: <Search_name_draft_roll />,
+  },
 
+  //Search Routes
+  { path: "searchNamein2003BiharE-roll", element: <SearchName2003 /> },
+  { path: "searchNameinE-Roll", element: <Electoral_search /> },
+  { path: "NavSearch", element: <NavSearch /> },
 
+  //Category Bar Routes
+  { path: "ict-apps", element: <ICTApps /> },
 ];
 
 export { Layout, routes };

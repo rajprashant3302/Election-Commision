@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rajprashant3302/Election-Commision/issues"
   },
-  "homepage": "https://github.com/rajprashant3302/Election-Commision#readme"
+  "homepage": "https://github.com/rajprashant3302/Election-Commision#readme",
+  "dependencies": {
+    "framer-motion": "^12.23.24"
+  }
 }
