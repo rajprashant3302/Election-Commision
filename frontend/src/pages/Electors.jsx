@@ -9,6 +9,8 @@ import {
   UsersIcon,        
   DevicePhoneMobileIcon,
 } from "@heroicons/react/24/outline";
+import Imagebar from "../Components/Imagebar";
+ 
 
 // --- Reusable Card Components (Unchanged for brevity) ---
 const ResponsiveCard = ({ title, subtitle, description, icon: Icon, className }) => {
@@ -241,6 +243,7 @@ export default function Electors() {
             ))}
           </div>
         </div>
+        <Imagebar/>
         {/* --- End of sections containing content --- */}
 
 

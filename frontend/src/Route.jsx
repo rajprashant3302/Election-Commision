@@ -20,7 +20,9 @@ import Sweep from "./Navbar-Pages/Sweep";
 import Helpline from "./Navbar-Pages/Helpline";
 import NationalVotersDay from "./Navbar-Pages/NationalVotersDay";
 import FactCheck from "./Navbar-Pages/FactCheck";
-import Electors from "./pages/Electors";// for electors page
+import Electors from "./pages/Electors"; // for electors page
+import PoliticalParties from "./pages/political-parties.jsx"; // for political-parties route
+import Candidates from "./pages/candidates.jsx"; // for candidates in political parties
 
 // Infotab Pages
 import CurrentIssues from "./pages/CurrentIssues";
@@ -58,7 +60,6 @@ import Sir_finalroll from "./pages/Sir_finalroll";
 import Sir_finalroll_forfullAC from "./pages/Sir_finalroll_forfullAC";
 import Search_name_draft_roll from "./pages/Search_name_draft_roll";
 
-
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/sections/:sectionPath", element: <SectionPage /> },
@@ -89,7 +90,6 @@ const routes = [
   { path: "/semp-demp", element: <ElectionPlan /> },
   { path: "/important-instructions", element: <ImportantInstructions /> },
   { path: "/ex-gratia-status", element: <ExGratiaStatusPage /> },
-  
 
   // Infotab Pages
   { path: "/latest-news", element: <LatestNews /> },
@@ -102,7 +102,10 @@ const routes = [
 
   // Political Party Routes
   { path: "/sections/newpartyregistration", element: <NewPartyRegistration /> },
-  { path: "/sections/electionsymbolallotment", element: <ElectionSymbolAllotment /> },
+  {
+    path: "/sections/electionsymbolallotment",
+    element: <ElectionSymbolAllotment />,
+  },
   { path: "/sections/nomination", element: <Nomination /> },
   { path: "/sections/permission", element: <Permission /> },
   { path: "/sections/affidavit", element: <Affidavit /> },
@@ -118,12 +121,17 @@ const routes = [
   { path: "/sections/electorals/homepage", element: <Homepage /> },
   { path: "/sections/electorals/search", element: <Electoral_search /> },
   { path: "/sections/electorals/sir-finalroll", element: <Sir_finalroll /> },
-  { path: "/sections/electorals/sir-finalroll-fullAC", element: <Sir_finalroll_forfullAC /> },
-  { path: "/sections/electorals/search-name-draft-roll", element: <Search_name_draft_roll /> },
+  {
+    path: "/sections/electorals/sir-finalroll-fullAC",
+    element: <Sir_finalroll_forfullAC />,
+  },
+  {
+    path: "/sections/electorals/search-name-draft-roll",
+    element: <Search_name_draft_roll />,
+  },
   { path: "/electors", element: <Electors /> },
-
-
-
+  { path: "/political-parties", element: <PoliticalParties /> },
+  { path: "/candidate-politicalparty", element: <Candidates /> },
 ];
 
 export { Layout, routes };
