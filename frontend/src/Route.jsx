@@ -20,9 +20,9 @@ import Sweep from "./Navbar-Pages/Sweep";
 import Helpline from "./Navbar-Pages/Helpline";
 import NationalVotersDay from "./Navbar-Pages/NationalVotersDay";
 import FactCheck from "./Navbar-Pages/FactCheck";
-import Electors from "./pages/Electors"; // for electors page
-import PoliticalParties from "./pages/political-parties.jsx"; // for political-parties route
-import Candidates from "./pages/candidates.jsx"; // for candidates in political parties
+import Electors from "./pages/Electors"; 
+import PoliticalParties from "./pages/PoliticalParties"; 
+import Candidates from "./pages/Candidates"; 
 
 // Infotab Pages
 import CurrentIssues from "./pages/CurrentIssues";
@@ -49,9 +49,9 @@ import Nomination from "./pages/PoliticalParty/Nomination";
 import Affidavit from "./pages/PoliticalParty/Affidavit";
 import ServiceVoterPortal from "./pages/EciOfficial/ServiceVoterPortal";
 import PostalBallots from "./pages/EciOfficial/PostalBallots";
-import Handbook from "./pages/PoliticalParty/Handbook.jsx";
-import Compendium from "./pages/EciOfficial/Compendium.jsx";
-import ObserverPortal from "./pages/EciOfficial/ObserverPortal.jsx";
+import Handbook from "./pages/PoliticalParty/Handbook";
+import Compendium from "./pages/EciOfficial/Compendium";
+import ObserverPortal from "./pages/EciOfficial/ObserverPortal";
 
 //ELECTORALS PAGES
 import Homepage from "./pages/Homepage";
@@ -61,11 +61,11 @@ import Sir_finalroll_forfullAC from "./pages/Sir_finalroll_forfullAC";
 import Search_name_draft_roll from "./pages/Search_name_draft_roll";
 
 //SEARCH PAGES
-import SearchName2003 from "./pages/SearchName2003.jsx";
-import NavSearch from "./pages/NavSearch.jsx";
+import SearchName2003 from "./pages/SearchName2003";
+import NavSearch from "./pages/NavSearch";
 
 //CATEGORY PAGES
-import ICTApps from "./pages/ICTApps.jsx";
+import ICTApps from "./pages/ICTApps";
 
 
 const routes = [

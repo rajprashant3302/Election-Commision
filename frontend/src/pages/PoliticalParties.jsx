@@ -1,4 +1,3 @@
-jsx
 import React from "react";
 import Nav from "../Components/Nav";
 import { Link } from "react-router-dom";
@@ -86,8 +85,6 @@ const reportsData = [
 const PoliticalPartyHome = () => {
   return (
     <div className="bg-[#f5f9fc] min-h-screen flex flex-col">
-      {/* Navbar */}
-      <Nav />
 
       {/* Header Section */}
       <div className="mt-6 mb-8 text-center">
@@ -179,9 +176,7 @@ const PoliticalPartyHome = () => {
         </div>
       </div>
 
-      {/* Footer */}
       <ImageBar />
-      <Footer />
     </div>
   );
 };
