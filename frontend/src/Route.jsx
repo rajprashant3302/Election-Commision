@@ -22,7 +22,7 @@ import NationalVotersDay from "./Navbar-Pages/NationalVotersDay";
 import FactCheck from "./Navbar-Pages/FactCheck";
 import Electors from "./pages/Electors"; 
 import PoliticalParties from "./pages/PoliticalParties"; 
-import Candidates from "./pages/Candidates"; 
+import Candidates from "./pages/Candi"; 
 
 // Infotab Pages
 import CurrentIssues from "./pages/CurrentIssues";
