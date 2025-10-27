@@ -60,6 +60,14 @@ import Sir_finalroll from "./pages/Sir_finalroll";
 import Sir_finalroll_forfullAC from "./pages/Sir_finalroll_forfullAC";
 import Search_name_draft_roll from "./pages/Search_name_draft_roll";
 
+//SEARCH PAGES
+import SearchName2003 from "./pages/SearchName2003.jsx";
+import NavSearch from "./pages/NavSearch.jsx";
+
+//CATEGORY PAGES
+import ICTApps from "./pages/ICTApps.jsx";
+
+
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/sections/:sectionPath", element: <SectionPage /> },
@@ -132,6 +140,14 @@ const routes = [
   { path: "/electors", element: <Electors /> },
   { path: "/political-parties", element: <PoliticalParties /> },
   { path: "/candidate-politicalparty", element: <Candidates /> },
+
+  //Search Routes
+  { path: "searchNamein2003BiharE-roll", element: <SearchName2003 /> },
+  { path: "searchNameinE-Roll", element: <Electoral_search /> },
+  { path: "NavSearch", element: <NavSearch /> },
+
+  //Category Bar Routes
+  { path: "ict-apps", element: <ICTApps /> },
 ];
 
 export { Layout, routes };
