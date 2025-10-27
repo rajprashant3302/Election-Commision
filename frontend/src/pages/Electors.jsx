@@ -168,7 +168,7 @@ export default function Electors() {
             <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-pink-700 rounded-lg transform -rotate-1"></div>
             <div className="relative bg-white p-2 rounded-lg shadow-lg overflow-hidden h-full border-4 border-purple-400 hover:border-8 hover:border-pink-500 transition-all duration-300">
               <img
-                src="./public/voter-pic-elector.jpg"
+                src="/voter-pic-elector.jpg"
                 alt="Person holding voter ID card"
                 className="w-full h-full object-cover rounded-lg transition-transform duration-500 hover:scale-110 cursor-pointer"
               />
