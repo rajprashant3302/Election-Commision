@@ -20,6 +20,9 @@ import Sweep from "./Navbar-Pages/Sweep";
 import Helpline from "./Navbar-Pages/Helpline";
 import NationalVotersDay from "./Navbar-Pages/NationalVotersDay";
 import FactCheck from "./Navbar-Pages/FactCheck";
+import Electors from "./pages/Electors"; // for electors page
+import PoliticalParties from "./pages/political-parties.jsx"; // for political-parties route
+import Candidates from "./pages/candidates.jsx"; // for candidates in political parties
 
 // Infotab Pages
 import CurrentIssues from "./pages/CurrentIssues";
@@ -134,6 +137,9 @@ const routes = [
     path: "/sections/electorals/search-name-draft-roll",
     element: <Search_name_draft_roll />,
   },
+  { path: "/electors", element: <Electors /> },
+  { path: "/political-parties", element: <PoliticalParties /> },
+  { path: "/candidate-politicalparty", element: <Candidates /> },
 
   //Search Routes
   { path: "searchNamein2003BiharE-roll", element: <SearchName2003 /> },
