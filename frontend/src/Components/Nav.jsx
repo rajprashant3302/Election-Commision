@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import NavMenu from "./NavMenu";
 import { IoCall, IoCloseSharp, IoMenuSharp } from "react-icons/io5";
-
+import { Link } from "react-router-dom";
 const EciMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const topSectionRef = useRef(null);
@@ -87,15 +87,21 @@ const EciMenu = () => {
             />
           </div>
           <div className="hidden md:flex px-4 py-3 flex-wrap gap-3 justify-center items-center">
-            <button className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-4 py-2 rounded text-sm shadow-md hover:scale-105 transition">
+            
+          <Link to="searchNamein2003BiharE-roll">  <button className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-4 py-2 rounded text-sm shadow-md hover:scale-105 transition">
               Search your name in 2003 Bihar E-Roll
-            </button>
-            <button className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-4 py-2 rounded text-sm shadow-md hover:scale-105 transition">
+            </button></Link>
+
+            <Link to="searchNameinE-Roll">
+             <button className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-4 py-2 rounded text-sm shadow-md hover:scale-105 transition">
               Search your name in E-Roll
-            </button>
-            <button className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-4 py-2 rounded text-sm shadow-md hover:scale-105 transition">
+            </button></Link>
+           
+           <Link to="NavSearch">
+           <button className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-4 py-2 rounded text-sm shadow-md hover:scale-105 transition">
               Search
-            </button>
+            </button></Link>
+            
           </div>
         </div>
       </div>

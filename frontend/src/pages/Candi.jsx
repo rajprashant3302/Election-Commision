@@ -1,7 +1,5 @@
 import React from "react";
-import Nav from "../Components/Nav";
 import { Link } from "react-router-dom";
-import Footer from "../Components/Footer";
 import ImageBar from "../Components/Imagebar";
 import {
   FileText,
