@@ -3,7 +3,13 @@ import Nav from "../Components/Nav";
 import { Link } from "react-router-dom";
 import Footer from "../Components/Footer";
 import ImageBar from "../Components/Imagebar";
-import { FileText, ClipboardList, BarChart3, PieChart, FileSpreadsheet } from "lucide-react";
+import {
+  FileText,
+  ClipboardList,
+  BarChart3,
+  PieChart,
+  FileSpreadsheet,
+} from "lucide-react";
 
 const politicalCards = [
   {
@@ -76,8 +82,7 @@ const reportsData = [
   },
   {
     title: "ELECTORAL TRUSTS REPORTS",
-    description:
-      "Annual Contribution Reports of Electoral Trusts",
+    description: "Annual Contribution Reports of Electoral Trusts",
     icon: <PieChart size={30} className="text-pink-600" />,
   },
 ];
@@ -85,7 +90,6 @@ const reportsData = [
 const PoliticalPartyHome = () => {
   return (
     <div className="bg-[#f5f9fc] min-h-screen flex flex-col">
-
       {/* Header Section */}
       <div className="mt-6 mb-8 text-center">
         <h1 className="text-3xl font-bold text-[#0b376d] mb-2">
@@ -146,8 +150,6 @@ const PoliticalPartyHome = () => {
           ))}
         </div>
       </div>
-
-      
 
       <ImageBar />
     </div>
