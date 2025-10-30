@@ -3,7 +3,13 @@ import Nav from "../Components/Nav";
 import { Link } from "react-router-dom";
 import Footer from "../Components/Footer";
 import ImageBar from "../Components/Imagebar";
-import { FileText, ClipboardList, BarChart3, PieChart, FileSpreadsheet } from "lucide-react";
+import {
+  FileText,
+  ClipboardList,
+  BarChart3,
+  PieChart,
+  FileSpreadsheet,
+} from "lucide-react";
 
 const politicalCards = [
   {
@@ -76,8 +82,7 @@ const reportsData = [
   },
   {
     title: "ELECTORAL TRUSTS REPORTS",
-    description:
-      "Annual Contribution Reports of Electoral Trusts",
+    description: "Annual Contribution Reports of Electoral Trusts",
     icon: <PieChart size={30} className="text-pink-600" />,
   },
 ];
@@ -85,7 +90,6 @@ const reportsData = [
 const PoliticalPartyHome = () => {
   return (
     <div className="bg-[#f5f9fc] min-h-screen flex flex-col">
-
       {/* Header Section */}
       <div className="mt-6 mb-8 text-center">
         <h1 className="text-3xl font-bold text-[#0b376d] mb-2">
@@ -144,35 +148,6 @@ const PoliticalPartyHome = () => {
               </p>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* New Grid Section from Image */}
-      <div className="bg-white py-12 px-6 md:px-12 lg:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* First Card */}
-          <div className="border-b md:border-b-0 md:border-r border-gray-300 pb-6 md:pb-0 md:pr-6">
-            <h2 className="text-2xl font-bold text-black mb-2">List of Political Parties</h2>
-            <p className="text-gray-600 text-sm">Find all political parties registered with ECI</p>
-          </div>
-
-          {/* Second Card */}
-          <div className="border-b md:border-b-0 pb-6 md:pb-0 md:pl-6">
-            <h2 className="text-2xl font-bold text-black mb-2">Recognition & De-recognition of parties</h2>
-            <p className="text-gray-600 text-sm">Find list of all recognition and De-recognition parties</p>
-          </div>
-
-          {/* Third Card */}
-          <div className="border-b md:border-b-0 md:border-r border-gray-300 pb-6 md:pb-0 md:pr-6 pt-6 md:pt-0">
-            <h2 className="text-2xl font-bold text-black mb-2">Dispute, Merger etc.</h2>
-            <p className="text-gray-600 text-sm">Press release about disputes and Merger</p>
-          </div>
-
-          {/* Fourth Card */}
-          <div className="pt-6 md:pt-0 md:pl-6">
-            <h2 className="text-2xl font-bold text-black mb-2">Miscellaneous, Orders, Notices etc.</h2>
-            <p className="text-gray-600 text-sm">ECI orders, instructions and Notices</p>
-          </div>
         </div>
       </div>
 
