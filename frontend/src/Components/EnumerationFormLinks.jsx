@@ -13,38 +13,38 @@ const links = [
     icon: <FaFileAlt className="text-pink-600 text-xl" />,
     text: `अर्हता तिथि 01.01.2003 के आधार पर प्रकाशित निर्वाचक सूची में सम्मिलित निर्वाचकों की मतदान केंद्रवार विवरणी देखने के लिए`,
     linkText: "यहाँ क्लिक करें",
-    href: "#",
+    href: "http://election.bihar.gov.in/electorsearch2003/index.aspx",
   },
   {
     icon: <FaDownload className="text-blue-600 text-xl" />,
     text: `विशेष गहन पुनरीक्षण-2025 के तहत पहले से भरा हुआ फॉर्म डाउनलोड करने के लिए`,
     linkText: "यहाँ क्लिक करें",
-    href: "#",
+    href: "https://voters.eci.gov.in/",
   },
   {
     icon: <FaSearch className="text-green-600 text-xl" />,
     text: `2003 बिहार मतदाता सूची में अपना नाम खोजने के लिए`,
     linkText: "यहाँ क्लिक करें",
-    href: "#",
+    href: "https://voters.eci.gov.in/bh_2003_eroll",
   },
   {
     icon: <FaUsers className="text-purple-600 text-xl" />,
     text: `अपने BLO, ERO एवं DEO के बारे में जानकारी के लिए`,
     linkText: "यहाँ क्लिक करें",
-    href: "#",
+    href: "https://electoralsearch.eci.gov.in/pollingstation",
   },
   {
     icon: <FaListUl className="text-indigo-600 text-xl" />,
     text: `परिसीमन आदेश 2008 के पूर्व एवं पश्चात निर्मित विधानसभा एवं जिला का विवरण के लिए`,
     linkText: "यहाँ क्लिक करें",
-    href: "#",
+    href: "https://ceoelection.bihar.gov.in/PDF/Year_2025/SpecialIntensiveRevision2025/AC%20and%20DIstrict%20%20wise%20comperative%20detail%20of%20Pre%20and%20Post%20Delimitation.pdf",
   },
-  {
-    icon: <FaCalendarAlt className="text-pink-600 text-xl" />,
-    text: `16.07.2025 तक लंबित गणना प्रपत्रों (Pending Enumeration Form) की सूची देखने के लिए`,
-    linkText: "यहाँ क्लिक करें",
-    href: "#",
-  },
+  // {
+  //   icon: <FaCalendarAlt className="text-pink-600 text-xl" />,
+  //   text: `16.07.2025 तक लंबित गणना प्रपत्रों (Pending Enumeration Form) की सूची देखने के लिए`,
+  //   linkText: "यहाँ क्लिक करें",
+  //   href: "#",
+  // },
 ];
 
 const EnumerationFormLinks = () => {

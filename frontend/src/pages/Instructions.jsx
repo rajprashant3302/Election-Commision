@@ -6,28 +6,28 @@ import {Link} from 'react-router-dom'
 const Instructions = () => {
     const updates = [
   {
-    title: "Notification regarding change in scheduled time of voting",
-    link:"#",
+    title: "Gazette of the first phase Notification of the Bihar Assembly general election 2025.",
+    link: "https://ceoelection.bihar.gov.in/PDF/Year_2025/ImportantInstructionsAndLetters/Gazette%20of%20the%20first%20phase%20Notification%20of%20the%20Bihar%20Assembly%20general%20election%202025.pdf",
     date: "Saturday 09 Aug 2025, 9:24 AM"
   },
   {
-    title: "Advertisement Rate list (DAVP) of Television channels/Radio channels/Newspapers/Broadcast",
-    link:"#",
+    title: "Notification regarding change in scheduled time of voting",
+    link: "https://ceoelection.bihar.gov.in/pdf/NotificationForChangeOfPollTime.pdf",
     date: "Friday 08 Aug 2025, 8:27 PM"
   },
   {
-    title: "Notification No-1594-2nd MACP)",
-    link:"#",
+    title: "Advertisement Rate list (DAVP) of Television channels/Radio channels/Newspapers/Broadcast",
+    link: "https://ceoelection.bihar.gov.in/pdf/4995-Advertisement%20Rate.pdf",
     date: "Friday 08 Aug 2025, 1:26 PM"
   },
   {
-    title: "Notification No-1593-1st MACP",
-    link:"#",
+    title: "Notification No-1594-2nd MACP",
+    link: "https://ceoelection.bihar.gov.in/pdf/1594-2ndMACP.pdf",
     date: "Friday 08 Aug 2025, 12:20 PM"
   },
   {
-    title: "Notification-65th Batch Sub Election Officers",
-    link:"#",
+    title: "Notification No-1593-1st MACP",
+    link: "https://ceoelection.bihar.gov.in/pdf/1593-1stMACP.pdf",
     date: "Friday 08 Aug 2025, 12:10 PM"
   }
 ];
