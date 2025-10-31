@@ -6,13 +6,13 @@ import {Link} from 'react-router-dom'
 const TenderVacancies = () => {
     const updates = [
   {
-    title: "मुख्य निर्वाचन पदाधिकारी, बिहार का कार्यालय, 7, सरदार पटेल मार्ग (मेलस रोड), पटना-800015 के गोदाम में रखित निर्वाचन से संबंधित रद्दी / पुरानी / अप्रचलित पुस्तकों का निस्तारीकरण, Last Date:- 12.08.2025 (11:00 AM) ",
-    link:"#",
+    title: "SHORT TERM REQUEST FOR PROPOSAL (RFP) For Selection of an Agency for providing a GPS Based Vehicle Tracking System for the Vidhan Sabha Election 2025 & Other Elections for the State of Bihar,Last Date:-13.10.2025 (03:00 PM) ",
+    link: "https://ceoelection.bihar.gov.in/PDF/Year_2025/Tenders/GPSVehicle/Short%20Term%20RFP%20for%20Selection%20of%20an%20Agency%20for%20providing%20GPS%20Based%20Vehicle%20Tracking%20System.pdf",
     date: "Saturday 09 Aug 2025, 9:24 AM"
   },
   {
-    title: "Supply, Installation of Office Appliances on Rental Basis for Office of the Chief Electoral Officer, Closing Date of online bids:- 12.06.2025 (02:00 PM)",
-    link: "#",
+    title: "Nylon Navy Blue Bag for Presiding Officer to carry Materials,Last Date:-26.09.2025 (05:00 PM)",
+    link: "https://ceoelection.bihar.gov.in/PDF/Year_2025/Tenders/Bag/Nylon%20Blue%20Bag%20re-Tender/RFP%20of%20Navy%20Blue%20Bag.pdf",
     date: "Friday 08 Aug 2025, 8:27 PM"
   }
 ];

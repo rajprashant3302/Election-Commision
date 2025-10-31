@@ -6,70 +6,65 @@ import { Link } from 'react-router-dom'
 export default function UpdatesList() {
   const updates = [
     {
-      title: "SIR Electoral draft Roll",
-      link: "https://voters.eci.gov.in/download-eroll?stateCode=S04",
+      title: "Press release & News clipping related to Randomisation for Bihar Assembly Election 2025",
+      link: "/evm-randomisation-list",
       date: "Saturday 01 Jul 2025, 9:24 AM"
     },
     {
-      title: "Notice to Registered Unrecognized Political Parties (RUPPS))",
-      link:"#",
+      title: "SIR Final Electoral Roll w.r.t. 01.07.2025",
+      link: "https://voters.eci.gov.in/download-eroll?stateCode=S04",
       date: "Friday 08 Aug 2025, 8:27 PM"
     },
     {
-      title: "Supplement Revision-2 Electoral Roll w.r.t. 01.04.2025",
-      link:"#",
+      title: "RUPPs delisted Commission Order 19-09-2025",
+      link: "https://ceoelection.bihar.gov.in/PDF/Year_2025/ImportantInstructionsAndLetters/Commissions%20Delisting%20Order%2019-09-2025.pdf",
       date: "Friday 08 Aug 2025, 1:26 PM"
     },
     {
-      title: "Draft & Final Electoral Roll w.r.t. 01.01.2025",
-      link:"#",
+      title: "Notice to Registered Unrecognized Political Parties (RUPPS)",
+      link: "https://ceoelection.bihar.gov.in/PDF/Year_2025/ImportantInstructionsAndLetters/Notice%20to%20Registered%20Unrecognized%20Political%20Parties%20(RUPPS).pdf",
       date: "Friday 08 Aug 2025, 12:20 PM"
     },
     {
-      title: "Bye Election Bihar Legislative Council-2024",
-      link:"#",
+      title: "Supplement Revision-2 Electoral Roll w.r.t. 01.04.2025",
+      link: "https://voters.eci.gov.in/download-eroll?stateCode=S04",
       date: "Friday 08 Aug 2025, 12:10 PM"
     },
-    {
-      title: "Draft & Final Electoral Roll w.r.t. 01.01.2025",
-      link:"#",
-      date: "Friday 08 Aug 2025, 12:20 PM"
-    },
-    {
-      title: "ECI Microsite (Lok Sabha General Elections-2024)",
-      link:"#",
-      date: "Friday 08 Aug 2025, 12:20 PM"
-    },
-    {
-      title: "Integrated Election Expenditure Monitoring System",
-      link:"#",
-      date: "Friday 08 Aug 2025, 12:20 PM"
-    },
-    {
-      title: "Internal Complaint Committee (Prevention, Prohibition and Redressal Rules, 2013)",
-      link:"#",
-      date: "Friday 08 Aug 2025, 12:20 PM"
-    },
-    {
-      title: "Registered Unrecognized Political Parties (RUPPs)",
-      link:"#",
-      date: "Friday 08 Aug 2025, 12:20 PM"
-    },
-    {
-      title: "Publication of criminal antecedents by contesting candidates and political parties reg.",
-      link:"#",
-      date: "Friday 08 Aug 2025, 12:20 PM"
-    },
-    {
-      title: "Notification of Result (BLAGE-2020)",
-      link:"#",
-      date: "Friday 08 Aug 2025, 12:20 PM"
-    },
-    {
-      title: "Election Planner",
-      link:"#",
-      date: "Friday 08 Aug 2025, 12:20 PM"
-    }
+    // {
+    //   title: "ECI Microsite (Lok Sabha General Elections-2024)",
+    //   link: "/election-management",
+    //   date: "Friday 08 Aug 2025, 12:20 PM"
+    // },
+    // {
+    //   title: "Integrated Election Expenditure Monitoring System",
+    //   link: "/sections/nomination",
+    //   date: "Friday 08 Aug 2025, 12:20 PM"
+    // },
+    // {
+    //   title: "Internal Complaint Committee (Prevention, Prohibition and Redressal Rules, 2013)",
+    //   link: "/sections/eci/compendium",
+    //   date: "Friday 08 Aug 2025, 12:20 PM"
+    // },
+    // {
+    //   title: "Registered Unrecognized Political Parties (RUPPs)",
+    //   link: "/sections/newpartyregistration",
+    //   date: "Friday 08 Aug 2025, 12:20 PM"
+    // },
+    // {
+    //   title: "Publication of criminal antecedents by contesting candidates and political parties reg.",
+    //   link: "/sections/affidavit",
+    //   date: "Friday 08 Aug 2025, 12:20 PM"
+    // },
+    // {
+    //   title: "Notification of Result (BLAGE-2020)",
+    //   link: "/past-elections",
+    //   date: "Friday 08 Aug 2025, 12:20 PM"
+    // },
+    // {
+    //   title: "Election Planner",
+    //   link: "/semp-demp",
+    //   date: "Friday 08 Aug 2025, 12:20 PM"
+    // }
   ];
 
   return (
