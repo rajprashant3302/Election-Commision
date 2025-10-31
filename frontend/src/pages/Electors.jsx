@@ -1,4 +1,5 @@
 import React, { useCallback } from "react"; // Import useCallback for memoizing the function
+import { Link } from "react-router-dom";
 import {
   UserIcon,
   StarIcon,
@@ -13,8 +14,9 @@ import Imagebar from "../Components/Imagebar";
  
 
 // --- Reusable Card Components (Unchanged for brevity) ---
-const ResponsiveCard = ({ title, subtitle, description, icon: Icon, className }) => {
+const ResponsiveCard = ({ title,link, subtitle, description, icon: Icon, className }) => {
   return (
+       <Link to={`${link}`}>
     <div
       className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-4 hover:border-pink-400 min-h-[220px] 
                  hover:bg-gradient-to-br hover:from-pink-50 hover:to-purple-100 
@@ -39,11 +41,13 @@ const ResponsiveCard = ({ title, subtitle, description, icon: Icon, className })
         </p>
       </div>
     </div>
+       </Link>
   );
 };
 
-const FeatureCard = ({ title, description, icon: Icon, iconBgColorClass }) => {
+const FeatureCard = ({ title,path, description, icon: Icon, iconBgColorClass }) => {
     return (
+      <Link to={`${path}`}>
         <div
             className="relative flex flex-col sm:flex-row bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer
                        transition-all duration-300 group"
@@ -73,6 +77,7 @@ const FeatureCard = ({ title, description, icon: Icon, iconBgColorClass }) => {
                 </div>
             </div>
         </div>
+        </Link>
     );
 };
 // -----------------------------------------------------------
@@ -89,13 +94,13 @@ export default function Electors() {
   // -----------------------------
 
   const services = [
-    { number: 1, title: "Register in Electoral Roll", description: "Register Online or Download the Form for Registration" },
-    { number: 2, title: "Track Application Status", description: "Track Status of Applications Submitted for Registration/Updation in E Roll." },
-    { number: 3, title: "Download Voter ID (E-EPIC)", description: "Download electronic copy of EPIC Card" },
-    { number: 4, title: "Update your Details in Electoral Roll", description: "Submit Online or Download Application Form for Shifting of Residence/Correction of Entries in Existing Electoral Roll/Replacement of EPIC." },
-    { number: 5, title: "Saksham App", description: "Mobile App to Provide all Voter Related Services to Person with Disabilities" },
-    { number: 6, title: "Submit your Aadhar No.", description: "Letter of Information of Aadhaar number for the Purpose of electoral roll authentication" },
-    { number: 7, title: "Deletion", description: "Voter Application Form for Objection for Proposed Inclusion/ Deletion of Name in Existing Electoral Roll" }
+    { number: 1, title: "Register in Electoral Roll", description: "Register Online or Download the Form for Registration", path:"/sections/electorals/homepage" },
+    { number: 2, title: "Track Application Status", description: "Track Status of Applications Submitted for Registration/Updation in E Roll.", path:"/sections/electorals/homepage" },
+    { number: 3, title: "Download Voter ID (E-EPIC)", description: "Download electronic copy of EPIC Card", path:"/sections/electorals/homepage" },
+    { number: 4, title: "Update your Details in Electoral Roll", description: "Submit Online or Download Application Form for Shifting of Residence/Correction of Entries in Existing Electoral Roll/Replacement of EPIC.", path:"/sections/electorals/homepage" },
+    { number: 5, title: "Saksham App", description: "Mobile App to Provide all Voter Related Services to Person with Disabilities", path:"/sections/electorals/saksham" },
+    { number: 6, title: "Submit your Aadhar No.", description: "Letter of Information of Aadhaar number for the Purpose of electoral roll authentication", path:"/sections/electorals/homepage" },
+    { number: 7, title: "Deletion", description: "Voter Application Form for Objection for Proposed Inclusion/ Deletion of Name in Existing Electoral Roll", path:"/sections/electorals/homepage" }
   ];
 
   const infoCards = [
@@ -104,24 +109,28 @@ export default function Electors() {
       subtitle: "Electoral Roll",
       icon: MagnifyingGlassIcon,
       description: "Find your name in Electoral Roll",
+      link: "/sections/electorals/search"
     },
     {
       title: "Know Your",
       subtitle: "PC/AC, Polling Station, ERO, BLO",
       icon: StarIcon,
       description: "You may know your Polling Stations details by providing Voter ID (EPIC NO.) number",
+      link: "/sections/electorals/know_your_polling_info"
     },
     {
       title: "Service",
       subtitle: "Voter",
       icon: UserIcon,
       description: "Registration of Service Voters",
+      link: "/sections/electorals/service_voter_registration"
     },
     {
       title: "Overseas",
       subtitle: "Voters",
       icon: CheckCircleIcon,
       description: "Enroll yourself as Overseas Elector",
+      link: "/sections/electorals/homepage"
     }
   ];
 
@@ -131,24 +140,28 @@ export default function Electors() {
       description: "Download physical forms",
       icon: DocumentTextIcon,
       iconBgColorClass: "bg-blue-600",
+      path:"/sections/electorals/registration_forms"
     },
     {
       title: "Know your Candidate",
       description: "Find the complete details for candidates including affidavit and Personal Details",
       icon: UserIcon,
       iconBgColorClass: "bg-purple-600",
+      path:"/sections/electorals/know_your_candidate"
     },
     {
       title: "cVIGIL : Citizen Vigilance",
       description: "Register complaint against MCC Violation",
       icon: UsersIcon,
       iconBgColorClass: "bg-blue-600",
+      path:"/sections/electorals/citizen_vigiliance"
     },
     {
       title: "Register Complaint",
       description: "Register your grievance with ECI",
       icon: DevicePhoneMobileIcon,
       iconBgColorClass: "bg-purple-600",
+      path:"/sections/electorals/national_grievance_portal"
     }
   ];
 
@@ -177,6 +190,7 @@ export default function Electors() {
 
           <div className="space-y-4">
             {services.map((service) => (
+              <Link to={`${service.path}`}>
               <div
                 key={service.number}
                 className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border-2 border-purple-200 hover:border-4 hover:border-pink-400"
@@ -197,6 +211,7 @@ export default function Electors() {
                   </div>
                 </div>
               </div>
+            </Link>
             ))}
           </div>
         </div>
@@ -218,13 +233,16 @@ export default function Electors() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {infoCards.map((card, index) => (
+                         
                 <ResponsiveCard
                   key={index}
                   title={card.title}
                   subtitle={card.subtitle}
                   description={card.description}
                   icon={card.icon}
+                  link={card.link}
                 />
+             
               ))}
             </div>
           </div>
@@ -239,6 +257,7 @@ export default function Electors() {
                 description={card.description}
                 icon={card.icon}
                 iconBgColorClass={card.iconBgColorClass}
+                path={card.path}
               />
             ))}
           </div>

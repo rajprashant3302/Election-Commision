@@ -69,6 +69,13 @@ import NavSearch from "./pages/NavSearch";
 
 //CATEGORY PAGES
 import ICTApps from "./pages/ICTApps";
+import Saksham from "./Components/Saksham";
+import Service_voter_reg from "./Components/Service_voter_reg";
+import Know_your_PC from "./Components/Know_your_PC";
+import Know_your_candidate from "./Components/Know_your_candidate";
+import Citizen_vigiliance from "./Components/Citizen_vigiliance";
+import National_griv_portal from "./Components/National_griv_portal";
+import Eroll_form from "./Components/Eroll_form";
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -128,7 +135,7 @@ const routes = [
   { path: "/sections/eci/servicevoterportal", element: <ServiceVoterPortal /> },
 
   // ELECTORALS ROUTES
-  { path: "/sections/electorals/homepage", element: <Homepage /> },
+  { path: "/sections/electorals/homepage", element: <SearchName2003 /> },
   { path: "/sections/electorals/search", element: <Electoral_search /> },
   { path: "/sections/electorals/sir-finalroll", element: <Sir_finalroll /> },
   {
@@ -141,6 +148,13 @@ const routes = [
   },
   // imagebar routes
   { path: "/electors", element: <Electors /> },
+  { path: "/sections/electorals/saksham", element: <Saksham /> },
+  { path: "/sections/electorals/know_your_polling_info", element: <Know_your_PC /> },
+  { path: "/sections/electorals/know_your_candidate", element: <Know_your_candidate /> },
+  { path: "/sections/electorals/citizen_vigiliance", element: <Citizen_vigiliance /> },
+  { path: "/sections/electorals/national_grievance_portal", element: <National_griv_portal /> },
+  { path: "/sections/electorals/registration_forms", element: <Eroll_form/> },
+  { path: "/sections/electorals/service_voter_registration", element: <Service_voter_reg /> },
   { path: "/political-parties", element: <PoliticalParties /> },
   { path: "/candidate-politicalparty", element: <Candidates /> },
   { path: "/election-management", element: <ElectionManagement /> },
