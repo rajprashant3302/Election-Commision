@@ -51,12 +51,12 @@ const LatestNews = () => {
                         </div>
                     </Link>
                 ))}
-                {/* View More Button */}
-                <div className="flex justify-end">
+
+                {/* <div className="flex justify-end">
                     <button className="text-blue-600 hover:bg-[#003366] hover:text-white px-3 py-2 rounded-lg flex items-center gap-1">
                         View More →
                     </button>
-                </div>
+                </div> */}
             </div>
         );
   
